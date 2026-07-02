@@ -67,7 +67,7 @@ Robot completes laps while avoiding green (left) and red (right) pillars, then p
 
     ![ObstacleChalleng]()
   
-#### Robot Photos
+## Robot Photos
 - front
 ![frontpic]()
 - back
