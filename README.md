@@ -37,3 +37,8 @@ Repository of UnemployedNerds for the 2026 Future Engineers WRO iran national co
 
 
  ![MyPhoto]()
+
+  ## Our Team Photo
+ ![MyPhoto]()
+ ## Fun Photo
+ ![MyPhoto]()
