@@ -80,3 +80,15 @@ Robot completes laps while avoiding green (left) and red (right) pillars, then p
 ![toppic]()
 - bottom
 ![bottompic]()
+
+
+## Videos 
+- open challenge
+(place vid here)
+
+- obstacle challenge 
+(place vid here)
+
+- YouTube Explanation Video  
+https://www.youtube.com/watch?v=XXXX
+
