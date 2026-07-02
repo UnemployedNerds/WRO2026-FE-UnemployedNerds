@@ -42,3 +42,27 @@ Repository of UnemployedNerds for the 2026 Future Engineers WRO iran national co
  ![MyPhoto]()
  ## Fun Photo
  ![MyPhoto]()
+
+
+
+
+
+ 
+## Quick WRO Future Engineers challenge overview
+
+#### Open Challenge
+- Open Challenge: 
+The robot must complete laps on a track without obstacles, demonstrating precision in wall-following and line detection.
+
+- Goals : 3 laps
+
+    ![OpenChallenge]()
+
+
+
+#### Obstacle Challenge
+- Obstacle Challenge
+Robot completes laps while avoiding green (left) and red (right) pillars, then parks in the designated zone.
+- Goals :  laps + parallel parking
+
+    ![ObstacleChalleng]()
