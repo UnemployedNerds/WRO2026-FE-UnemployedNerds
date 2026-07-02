@@ -66,3 +66,17 @@ Robot completes laps while avoiding green (left) and red (right) pillars, then p
 - Goals :  laps + parallel parking
 
     ![ObstacleChalleng]()
+
+  #### Robot Photos
+- front
+![frontpic]()
+- back
+![backpic]()
+- left
+![leftpic]()
+- right
+![rightpic]()
+- top
+![toppic]()
+- bottom
+![bottompic]()
