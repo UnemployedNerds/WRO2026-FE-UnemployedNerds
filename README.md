@@ -95,5 +95,19 @@ https://www.youtube.com/watch?v=XXXX
 
 ## Platform and Components
 #### Why we chose EV3
-- PROS AND CONS
+### PROS AND CONS
+- PROS :
+
+why we use compass sensor
+
+why we use piximoon camera insted of other camera
+
+why we use ultra sonic
+
+why we use color sensor
+
+importance of using compass and ultra sonic 
+the reason we dont use only ulyrasonic for navigation
+we could have use two ultra sonic but we use hitech color sesnsor for 
+\diffrance between large motor and meduim motor
 
