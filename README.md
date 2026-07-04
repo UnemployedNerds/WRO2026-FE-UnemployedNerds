@@ -8,7 +8,7 @@ Repository of UnemployedNerds for the 2026 Future Engineers WRO iran national co
 
  - Role : Coder
  - Age : 15
- - Hello everyonee!! im araz im from iran , its my 5th year competing in WRO tournoments,
+ - Description : Hello everyonee!! im araz im from iran , its my 5th year competing in WRO tournoments,
  im deeply passionate about math/physics and electronics , i also play chess for a hobby rated 1500 in FIDE classical
  - Instagram : araz.abbasi.3
  - Email : arazabbasi830@gmail.com 
@@ -18,11 +18,11 @@ Repository of UnemployedNerds for the 2026 Future Engineers WRO iran national co
 
 ## Radin Mirsarvestani
 
- - Role : 
- - Age : 
- - 
- - Instagram : 
- - Email :  
+ - Role : Builder
+ - Age : 15
+ - Description : Hello I'm Radin I'm from Iran Its my 5th year competing in WRO tournoments, I like building and playing war thunder
+ - Instagram : Not available
+ - Email : radin.mirsarvestani1030@gmail.com
 
 
  ![MyPhoto]()
@@ -30,10 +30,10 @@ Repository of UnemployedNerds for the 2026 Future Engineers WRO iran national co
  ## Benyamin Nikvarz
 
  - Role : Coach
- - Age : 
- - 
- - Instagram :
- - Email :  
+ - Age : 20
+ - Description :  year electrical engineer been doing robotics since 2016 and ive been coaching this team for 2 years and former WRO competetor
+ - Instagram : 
+ - Email : benyamin.nikvarz@gmail.com
 
 
  ![MyPhoto]()
@@ -86,9 +86,14 @@ Robot completes laps while avoiding green (left) and red (right) pillars, then p
 - open challenge
 (place vid here)
 
-- obstacle challenge 
+- obstacle challenge
 (place vid here)
 
 - YouTube Explanation Video  
 https://www.youtube.com/watch?v=XXXX
+
+
+## Platform and Components
+#### Why we chose EV3
+- PROS AND CONS
 
