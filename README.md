@@ -206,6 +206,58 @@ The color sensor is mounted close to the ground to reliably detect colored field
 we use the color sensor for detecting the orange and blue strips on the map
 
 
+## Pixy2 Vision Sensor
+
+### Specifications
+
+| **Property** | **Value** |
+|--------------|-----------|
+| Type | Vision Sensor |
+| Microcontroller | NXP LPC4330 (Dual-Core ARM Cortex-M4/M0) |
+| Resolution | 1296×976 (processed at 640×480) |
+| Frame Rate | Up to 60 FPS |
+| Field of View | 80° Horizontal, 40° Vertical |
+| Power Supply | 5 V, 130–170 mA |
+| Interface | Custom I2C (EV3 INPUT_1) |
+| Color Signatures | Up to 7 programmable |
+| Features | Object Detection, Color Tracking, Line Tracking, Barcode Detection |
+
+### Overview
+
+The Pixy2 Vision Sensor provides real-time object recognition and color tracking while processing images internally, reducing the computational load on the EV3 Brick. It is mounted above the robot and connected through a custom I2C interface to the EV3 sensor port (`INPUT_1`).
+
+### Implementation
+
+For the Obstacle Challenge, Pixy2 detects:
+
+-  **Green Pillars** – Signature 1
+-  **Red Pillars** – Signature 2
+
+The camera operates at up to **60 FPS**, providing fast and reliable object detection. Objects are filtered using their **X** and **Y** coordinates to eliminate false detections before generating steering corrections for obstacle avoidance.
+
+### Advantages
+
+- High-speed processing (up to 60 FPS)
+- Detects up to seven programmable color signatures
+- Built-in image processing reduces EV3 CPU usage
+- Supports line tracking and barcode detection
+- Easy integration through I2C
+
+### Limitations
+
+- Performance depends on lighting conditions
+- Requires color calibration using PixyMon
+- Similar colors may occasionally be misidentified
+
+### Lessons Learned
+
+Accurate color calibration in **PixyMon v2** was essential for reliable detection. Maintaining consistent lighting conditions significantly improved performance. Future versions of the robot may utilize Pixy2's built-in line-tracking mode for the Open Challenge.
+
+### Implementation Impact
+
+Pixy2 achieved approximately **97% detection accuracy** during testing, resulting in smoother steering corrections, more reliable obstacle avoidance, and fewer collisions throughout autonomous operation.
+
+
 why we use piximoon camera insted of other camera
 
 why we use ultra sonic
