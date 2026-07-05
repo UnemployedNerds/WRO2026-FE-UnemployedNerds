@@ -49,7 +49,7 @@ Repository of UnemployedNerds for the 2026 Future Engineers WRO iran national co
  - Email : arazabbasi830@gmail.com
 
 
-![golophoto](images/golo.jpg)
+![golophoto]()
 
   ## Our Team Photo
  ![MyPhoto]()
