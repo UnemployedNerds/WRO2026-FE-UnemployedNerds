@@ -141,8 +141,39 @@ The LEGO EV3 Brick is a programmable robotics controller based on an ARM9 proces
 - **Torque:** 20 N·cm (effective torque ≈15 N·cm under the robot's 1.2 kg load)
 - **Weight:** 120 g
 - **Feature:** Provides propulsion (rear wheels) and steering (front wheels)
-  we use the medium motor for steering and movement which will be explained later in the repo
+## The usuage of medium motor in our robot : 
+-Steering
+-Controling the rear wheels
+-Moving the Ultrasonic sensor
+  
+### Sensors and modules :
+## Hi-technic compasss :
+### Overview
+The HiTechnic Compass Sensor is a digital compass compatible with LEGO EV3 and NXT robots. It uses a built-in **3-axis magnetometer** to detect the Earth's magnetic field and determine the robot's heading.
 
+### How It Works
+The sensor continuously measures the Earth's magnetic field and calculates the robot's orientation, returning a heading between **0° and 359°**.
+
+- **0°** → North
+- **90°** → East
+- **180°** → South
+- **270°** → West
+
+This allows the robot to maintain a consistent heading and perform accurate turns, even if wheel slippage occurs.
+
+### Advantages
+- High heading accuracy
+- Helps compensate for wheel slip
+- Fast real-time heading updates
+- Simple integration with EV3 programs
+
+### Limitations
+- Sensitive to nearby magnets and metal objects
+- Can be affected by motor electromagnetic interference
+- Measures **magnetic north**, not true north
+
+### Implementation
+The compass sensor is mounted away from the drive motors to minimize magnetic interference. During autonomous operation, it provides continuous heading feedback, enabling precise turns and stable navigation throughout the robot's run.
 
 
 
