@@ -202,7 +202,7 @@ The sensor illuminates the target with its RGB LEDs and measures the reflected l
 ### Implementation
 The color sensor is mounted close to the ground to reliably detect colored field markers and surface changes. Its readings are used to trigger navigation events, identify zones, and improve the robot's decision-making during autonomous operation.
 
-###why we use color sensor :
+### why we use color sensor :
 we use the color sensor for detecting the orange and blue strips on the map
 
 
