@@ -108,6 +108,9 @@ https://www.youtube.com/watch?v=XXXX
 | Built-in screen, buttons, and speaker | Not ideal for AI or advanced vision tasks |
 | Expandable with Pico/Arduino | Discontinued by LEGO |
 
+#### Components and sensors :
+### Motors :
+
 why we use compass sensor
 
 why we use piximoon camera insted of other camera
