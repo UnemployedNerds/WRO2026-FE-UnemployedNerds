@@ -120,7 +120,19 @@ https://www.youtube.com/watch?v=XXXX
 | Expandable with Pico/Arduino | Discontinued by LEGO |
 
 #### Components and sensors :
-### Motors :
+### Motors 
+-Lego EV3 Medium motor :
+![medmotorpic]()
+| **Pros** ✅ | **Cons** ❌ |
+|-------------|-------------|
+| Faster than the Large Motor (~240 RPM). | Lower torque than the Large Motor. |
+| Compact and lightweight design. | Not suitable for driving heavy robots. |
+| Built-in 1° rotation encoder for precise movement. | Can stall under heavy loads. |
+| Quick acceleration and direction changes. | Often requires gear reduction for more power. |
+| Ideal for claws, steering, and other attachments. | Limited lifting capability. |
+| Easy to integrate into small mechanisms. | Usually only one is included in the EV3 Education set. |
+
+
 
 why we use compass sensor
 
