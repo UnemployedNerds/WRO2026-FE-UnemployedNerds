@@ -106,8 +106,9 @@ Robot completes laps while avoiding green (left) and red (right) pillars, then p
 https://www.youtube.com/watch?v=XXXX
 
 
-## Platform and Components
-#### Why we chose EV3
+## Platform and Components used
+#### Why we chose EV3 brick for the brain of our robot
+![medmotor](images/ev3brick.jpg)
 - we chose EV3 for its simplicity and versitality , easy sensor integration and fast development and built in safty features
 ### PROS AND CONS
 | **Pros** | **Cons** |
@@ -134,6 +135,7 @@ https://www.youtube.com/watch?v=XXXX
 - **Torque:** 20 N·cm (effective torque ≈15 N·cm under the robot's 1.2 kg load)
 - **Weight:** 120 g
 - **Feature:** Provides propulsion (rear wheels) and steering (front wheels)
+  we use the medium motor for steering and movement which will be explained later in the repo
 
 
 
