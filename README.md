@@ -126,7 +126,7 @@ https://www.youtube.com/watch?v=XXXX
 
 ## EV3 Medium Motor
 
-![medmotorpic]()
+![medmotor](images/mediummotor.jpg)
 ### Specifications
 - **Type:** DC Motor (Medium)
 - **Voltage:** 9 V
