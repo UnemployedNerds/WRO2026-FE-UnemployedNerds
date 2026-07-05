@@ -207,7 +207,7 @@ we use the color sensor for detecting the orange and blue strips on the map
 
 
 ## Pixy2 Vision Sensor
-
+![pixycam](images/pixy2.jpg)
 ### Specifications
 
 | **Property** | **Value** |
