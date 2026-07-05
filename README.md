@@ -1,46 +1,4 @@
-WRO2025-FE-ShahroodRC/
-├── 📄 README.md                          # Complete documentation (you are here!)
-│
-├── 📂 codes/                             # Python scripts (ev3dev)
-│   ├── open-challenge-code.py           # Qualification challenge (wall-follow + line detect)
-│   ├── obstacle-challenge-code.py       # Final challenge (obstacle avoidance + parking)
-│   └── codes.md                         # Code documentation
-│
-├── 📂 3d-files/                          # Design files & visualizations
-│   ├── robot_complete.io                # LEGO chassis design (all components)
-│   ├── pixy-cam-mount.stl               # 3D-printable Pixy 2.1 camera mount
-│   ├── *.jpg                            # Various 3D renders
-│   └── 3d-files.md                      # Design notes
-│
-├── 📂 pictures/                          # Component diagrams & charts
-│   ├── randomizer-screenshots/          # App UI screenshots
-│   ├── robot-components/                # Component photos
-│   ├── shahroodrc-logo.jpg              # Team logo
-│   ├── *.jpg, *.svg                     # Various technical visualizations
-│   └── pictures.md                      # Picture notes
-│
-├── 📂 robot-photos/                      # Physical robot images
-│   ├── robot-front.jpg, robot-back.jpg  # Front & back views
-│   ├── robot-left.jpg, robot-right.jpg  # Side views
-│   ├── robot-top.jpg, robot-bottom.jpg  # Top & bottom views
-│   ├── robot.jpg                        # 3-quarter view
-│   ├── *.jpg                            # Various photos of the robot's different parts
-|   └── robot-photos.md                  # Robot photos' notes
-│
-├── 📂 team-photos/                       # Team & achievement photos
-│   ├── [Team member photos]
-│   ├── [championship photos]
-│   └── team-photos.md                   # Team photos folder notes
-│
-├── 📂 videos/                            # Performance recordings
-│   ├── open-challenge.mp4               # Qualification run
-│   ├── obstacle-challenge.mp4           # Final challenge run
-│   ├── Explaining.mp4                   # Explanation video
-│   └── videos.md                        # Videos description
-│
-├── 📄 WRO 2025 - Future Engineers rules  # Pdf of future engineers category rules
-├── 📦 randomizer.apk                     # Android app (track generator)
-└── 📄 LICENSE                            # MIT License
+
 
 # WRO2026-FE-UnemployedNerds
 Repository of UnemployedNerds for the 2026 Future Engineers WRO iran national competition 
@@ -167,14 +125,94 @@ https://www.youtube.com/watch?v=XXXX
 ### Motors 
 -Lego EV3 Medium motor :
 ![medmotorpic]()
-| **Pros**  | **Cons**  |
-|-------------|-------------|
-| Faster than the Large Motor (~240 RPM). | Lower torque than the Large Motor. |
-| Compact and lightweight design. | Not suitable for driving heavy robots. |
-| Built-in 1° rotation encoder for precise movement. | Can stall under heavy loads. |
-| Quick acceleration and direction changes. | Often requires gear reduction for more power. |
-| Ideal for steering, and other attachments. | Limited lifting capability. |
-| Easy to integrate into small mechanisms. | 
+## EV3 Medium Motor
+
+### Specifications
+- **Type:** DC Motor (Medium)
+- **Voltage:** 9 V
+- **Speed:** 160 RPM
+- **Torque:** 20 N·cm (effective torque ≈15 N·cm under the robot's 1.2 kg load)
+- **Weight:** 120 g
+- **Feature:** Provides propulsion (rear wheels) and steering (front wheels)
+
+### Interface
+| **Motor** | **Port** | **Function** |
+|-----------|----------|--------------|
+| Steering Motor | `OUTPUT_B` | Controls front-wheel steering via rack-and-pinion |
+| Primary Drive Motor | `OUTPUT_D` | Drives the rear wheels through the differential |
+| Secondary Drive Motor *(Open Challenge only)* | `OUTPUT_C` | Mechanically coupled to the differential for additional torque and speed |
+
+### Configuration for Challenges
+
+#### Obstacle Challenge (Final Submitted Version)
+- One Medium Motor on `OUTPUT_D` drives the differential.
+- The gear of the second drive motor is physically removed.
+- Optimized for reliable torque and precise parking.
+
+#### Open Challenge
+- A second Medium Motor is connected to `OUTPUT_C`.
+- Both motors are mechanically coupled to the same differential gear.
+- Motors are synchronized in software.
+- This configuration complies with WRO regulations because both motors drive a **single mechanical output** (the differential).
+
+---
+
+## Gear Train
+
+Both 20-tooth motor gears drive a shared 12-tooth gear.
+
+The 12-tooth gear shares an axle with a 20-tooth gear, which drives the 24-tooth differential gear.
+
+**Final Gear Ratio**
+
+```text
+(20 : 12) × (20 : 24)
+= 25 : 18
+≈ 1.39 : 1
+```
+
+Result:
+- ≈39% speed reduction
+- ≈39% torque increase compared to direct drive
+
+---
+
+## Description
+
+The ShahroodRC robot uses one or two EV3 Medium Motors for propulsion.
+
+- `motor_b` (`OUTPUT_D`) is always used for propulsion.
+- `motor_c` (`OUTPUT_C`) is installed only during the Open Challenge.
+
+The compound gear reduction increases available torque while maintaining a high driving speed.
+
+Steering is performed by a single Medium Motor (`motor_a` on `OUTPUT_B`) connected to a rack-and-pinion mechanism.
+
+Medium Motors were chosen over Large Motors because of their significantly lower weight (120 g vs 170 g) while still providing sufficient torque for our 1.1–1.2 kg robot.
+
+---
+
+## Lessons Learned
+
+Early tests using near-direct drive occasionally resulted in motor strain and stalling during tight parking maneuvers.
+
+The final **20–12–20–24** compound gear train, combined with the dual-motor configuration in the Open Challenge:
+
+- Increased available torque
+- Reduced peak current from approximately **600 mA** to **400 mA** during parking
+- Eliminated motor stalling
+
+Adding the second drive motor for the Open Challenge further reduced strain at higher speeds.
+
+---
+
+## Implementation Impact
+
+- Precise encoder-based functions (`on_for_degrees()` and `on_for_rotations()`) enabled parking in under **10 seconds** with almost zero wheel slippage.
+- The modular single/dual motor design allowed independent optimization for:
+  - **Obstacle Challenge:** Maximum torque
+  - **Open Challenge:** Higher speed
+- No hardware redesign was required between challenges.
 
 
 
