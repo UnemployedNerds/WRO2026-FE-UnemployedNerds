@@ -95,8 +95,18 @@ https://www.youtube.com/watch?v=XXXX
 
 ## Platform and Components
 #### Why we chose EV3
+- we chose EV3 for its simplicity and versitality , easy sensor integration and fast development and built in safty features
 ### PROS AND CONS
-- PROS :
+| **Pros** | **Cons** |
+|-----------|-----------|
+| Reliable and stable | Limited processing power |
+| Precise motor control | Low RAM compared to modern boards |
+| Easy sensor integration | No built-in Wi-Fi |
+| Supports Python (ev3dev) | Limited number of ports |
+| Large robotics community | Older hardware |
+| Fast to prototype with | More expensive for its performance |
+| Built-in screen, buttons, and speaker | Not ideal for AI or advanced vision tasks |
+| Expandable with Pico/Arduino | Discontinued by LEGO |
 
 why we use compass sensor
 
