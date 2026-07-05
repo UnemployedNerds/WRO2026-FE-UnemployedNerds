@@ -1,3 +1,47 @@
+WRO2025-FE-ShahroodRC/
+├── 📄 README.md                          # Complete documentation (you are here!)
+│
+├── 📂 codes/                             # Python scripts (ev3dev)
+│   ├── open-challenge-code.py           # Qualification challenge (wall-follow + line detect)
+│   ├── obstacle-challenge-code.py       # Final challenge (obstacle avoidance + parking)
+│   └── codes.md                         # Code documentation
+│
+├── 📂 3d-files/                          # Design files & visualizations
+│   ├── robot_complete.io                # LEGO chassis design (all components)
+│   ├── pixy-cam-mount.stl               # 3D-printable Pixy 2.1 camera mount
+│   ├── *.jpg                            # Various 3D renders
+│   └── 3d-files.md                      # Design notes
+│
+├── 📂 pictures/                          # Component diagrams & charts
+│   ├── randomizer-screenshots/          # App UI screenshots
+│   ├── robot-components/                # Component photos
+│   ├── shahroodrc-logo.jpg              # Team logo
+│   ├── *.jpg, *.svg                     # Various technical visualizations
+│   └── pictures.md                      # Picture notes
+│
+├── 📂 robot-photos/                      # Physical robot images
+│   ├── robot-front.jpg, robot-back.jpg  # Front & back views
+│   ├── robot-left.jpg, robot-right.jpg  # Side views
+│   ├── robot-top.jpg, robot-bottom.jpg  # Top & bottom views
+│   ├── robot.jpg                        # 3-quarter view
+│   ├── *.jpg                            # Various photos of the robot's different parts
+|   └── robot-photos.md                  # Robot photos' notes
+│
+├── 📂 team-photos/                       # Team & achievement photos
+│   ├── [Team member photos]
+│   ├── [championship photos]
+│   └── team-photos.md                   # Team photos folder notes
+│
+├── 📂 videos/                            # Performance recordings
+│   ├── open-challenge.mp4               # Qualification run
+│   ├── obstacle-challenge.mp4           # Final challenge run
+│   ├── Explaining.mp4                   # Explanation video
+│   └── videos.md                        # Videos description
+│
+├── 📄 WRO 2025 - Future Engineers rules  # Pdf of future engineers category rules
+├── 📦 randomizer.apk                     # Android app (track generator)
+└── 📄 LICENSE                            # MIT License
+
 # WRO2026-FE-UnemployedNerds
 Repository of UnemployedNerds for the 2026 Future Engineers WRO iran national competition 
 
@@ -18,7 +62,7 @@ Repository of UnemployedNerds for the 2026 Future Engineers WRO iran national co
 
 ## Radin Mirsarvestani
 
- - Role : Builder
+ - Role : Builder/slave
  - Age : 15
  - Description : Hello I'm Radin I'm from Iran Its my 5th year competing in WRO tournoments, I like building and playing war thunder
  - Instagram : Not available
@@ -31,7 +75,7 @@ Repository of UnemployedNerds for the 2026 Future Engineers WRO iran national co
 
  - Role : Coach
  - Age : 20
- - Description :  year electrical engineer been doing robotics since 2016 and ive been coaching this team for 2 years and former WRO competetor
+ - Description : 2nd year electrical engineer been doing robotics since 2016 and ive been coaching this team for 2 years and former WRO competetor
  - Instagram : 
  - Email : benyamin.nikvarz@gmail.com
 
@@ -123,7 +167,7 @@ https://www.youtube.com/watch?v=XXXX
 ### Motors 
 -Lego EV3 Medium motor :
 ![medmotorpic]()
-| **Pros** ✅ | **Cons** ❌ |
+| **Pros**  | **Cons**  |
 |-------------|-------------|
 | Faster than the Large Motor (~240 RPM). | Lower torque than the Large Motor. |
 | Compact and lightweight design. | Not suitable for driving heavy robots. |
