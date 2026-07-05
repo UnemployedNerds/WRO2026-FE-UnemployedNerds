@@ -141,10 +141,10 @@ The LEGO EV3 Brick is a programmable robotics controller based on an ARM9 proces
 - **Torque:** 20 N·cm (effective torque ≈15 N·cm under the robot's 1.2 kg load)
 - **Weight:** 120 g
 - **Feature:** Provides propulsion (rear wheels) and steering (front wheels)
-## The usuage of medium motor in our robot : 
--Steering
--Controling the rear wheels
--Moving the Ultrasonic sensor
+# The usuage of medium motor in our robot : 
+- Steering
+- Controling the rear wheels
+- Moving the Ultrasonic sensor
   
 ### Sensors and modules :
 ## Hi-technic compasss :
@@ -174,11 +174,12 @@ This allows the robot to maintain a consistent heading and perform accurate turn
 
 ### Implementation
 The compass sensor is mounted away from the drive motors to minimize magnetic interference. During autonomous operation, it provides continuous heading feedback, enabling precise turns and stable navigation throughout the robot's run.
+## why we use compass sensor :
+- we use the compass sensor for navigation and making the robot head into the direction we want
 
 
 
 
-why we use compass sensor
 
 why we use piximoon camera insted of other camera
 
