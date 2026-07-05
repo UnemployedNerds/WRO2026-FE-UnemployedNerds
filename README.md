@@ -148,6 +148,7 @@ The LEGO EV3 Brick is a programmable robotics controller based on an ARM9 proces
   
 ### Sensors and modules :
 ## Hi-technic compasss :
+![compass](images/compass.jpg)
 ### Overview
 The HiTechnic Compass Sensor is a digital compass compatible with LEGO EV3 and NXT robots. It uses a built-in **3-axis magnetometer** to detect the Earth's magnetic field and determine the robot's heading.
 
