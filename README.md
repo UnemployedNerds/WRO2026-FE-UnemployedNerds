@@ -178,7 +178,7 @@ The compass sensor is mounted away from the drive motors to minimize magnetic in
 ## why we use compass sensor :
 - we use the compass sensor for navigation and making the robot head into the direction we want
   
-#### HiTechnic Color Sensor
+## HiTechnic Color Sensor
 
 ### Overview
 The HiTechnic Color Sensor is a digital sensor compatible with LEGO EV3 and NXT robots. It detects the color and intensity of light reflected from nearby objects using built-in red, green, and blue (RGB) LEDs and photodiodes.
