@@ -102,7 +102,7 @@ https://www.youtube.com/watch?v=XXXX
 | Reliable and stable | Limited processing power |
 | Precise motor control | Low RAM compared to modern boards |
 | Easy sensor integration | No built-in Wi-Fi |
-| Supports Python (ev3dev) | Limited number of ports |
+| Supports multiple coding languages | Limited number of ports |
 | Large robotics community | Older hardware |
 | Fast to prototype with | More expensive for its performance |
 | Built-in screen, buttons, and speaker | Not ideal for AI or advanced vision tasks |
