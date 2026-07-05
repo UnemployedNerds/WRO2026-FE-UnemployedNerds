@@ -111,6 +111,7 @@ https://www.youtube.com/watch?v=XXXX
 ![medmotor](images/ev3brick.jpg)
 - we chose EV3 for its simplicity and versitality , easy sensor integration and fast development and built in safty features
 ### PROS AND CONS
+The LEGO EV3 Brick is a programmable robotics controller based on an ARM9 processor running a Linux-based operating system. It functions as the central control unit, managing sensor input, motor control, and autonomous robot operation.
 | **Pros** | **Cons** |
 |-----------|-----------|
 | Reliable and stable | Limited processing power |
@@ -121,6 +122,11 @@ https://www.youtube.com/watch?v=XXXX
 | Fast to prototype with | More expensive for its performance |
 | Built-in screen, buttons, and speaker | Not ideal for AI or advanced vision tasks |
 | Expandable with Pico/Arduino | Discontinued by LEGO |
+- An ARM9 processor
+- 64 MB RAM
+- 16 MB Flash storage
+- A Linux-based operating system
+- USB, Bluetooth, and motor/sensor interfaces
 
 #### Components and sensors :
 ### Motors :
