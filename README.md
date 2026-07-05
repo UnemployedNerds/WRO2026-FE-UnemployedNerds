@@ -129,8 +129,8 @@ https://www.youtube.com/watch?v=XXXX
 | Compact and lightweight design. | Not suitable for driving heavy robots. |
 | Built-in 1° rotation encoder for precise movement. | Can stall under heavy loads. |
 | Quick acceleration and direction changes. | Often requires gear reduction for more power. |
-| Ideal for claws, steering, and other attachments. | Limited lifting capability. |
-| Easy to integrate into small mechanisms. | Usually only one is included in the EV3 Education set. |
+| Ideal for steering, and other attachments. | Limited lifting capability. |
+| Easy to integrate into small mechanisms. | 
 
 
 
