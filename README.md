@@ -122,11 +122,11 @@ https://www.youtube.com/watch?v=XXXX
 | Expandable with Pico/Arduino | Discontinued by LEGO |
 
 #### Components and sensors :
-### Motors 
--Lego EV3 Medium motor :
-![medmotorpic]()
+### Motors :
+
 ## EV3 Medium Motor
 
+![medmotorpic]()
 ### Specifications
 - **Type:** DC Motor (Medium)
 - **Voltage:** 9 V
