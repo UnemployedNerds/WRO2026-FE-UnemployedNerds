@@ -302,8 +302,14 @@ We use the ultrasonic sensor for wall following and navigation throughout the ch
 
 ## Importance of using compass and ultrasonic coombined
 ### What happens if we only use ultrasonic :
+the reason we dont use only ultrasonic for navigation is that the sensor alone isnt reliable bcz the waves can scatter etc
+### What happens if we only use compass :
+the reason we dont use only compass for navigation is : we can only see the direction were heading not how far we are from the walls
+### our solution :
+we combine both the sensor so we can keep our distance with the wall and also move in the direction we want
+### How u may ask? :
+we use a PD algorithm:
 
-the reason we dont use only ulyrasonic for navigation
 we could have use two ultra sonic but we use hitech color sesnsor for 
 \diffrance between large motor and meduim motor
 
