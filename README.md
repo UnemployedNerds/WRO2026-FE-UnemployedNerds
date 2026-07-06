@@ -218,20 +218,20 @@ we use the color sensor for detecting the orange and blue strips on the map
 | Frame Rate | Up to 60 FPS |
 | Field of View | 80° Horizontal, 40° Vertical |
 | Power Supply | 5 V, 130–170 mA |
-| Interface | Custom I2C (EV3 INPUT_1) |
+| Interface | Custom I2C (port 4) |
 | Color Signatures | Up to 7 programmable |
 | Features | Object Detection, Color Tracking, Line Tracking, Barcode Detection |
 
 ### Overview
 
-The Pixy2 Vision Sensor provides real-time object recognition and color tracking while processing images internally, reducing the computational load on the EV3 Brick. It is mounted above the robot and connected through a custom I2C interface to the EV3 sensor port (`INPUT_1`).
+The Pixy2 Vision Sensor provides real-time object recognition and color tracking while processing images internally, reducing the computational load on the EV3 Brick. It is mounted above the robot and connected through a custom I2C interface to the EV3 sensor port (`port 4`).
 
 ### Implementation
 
 For the Obstacle Challenge, Pixy2 detects:
 
--  **Green Pillars** – Signature 1
--  **Red Pillars** – Signature 2
+-  **Green Pillars** – Signature 2
+-  **Red Pillars** – Signature 1
 
 The camera operates at up to **60 FPS**, providing fast and reliable object detection. Objects are filtered using their **X** and **Y** coordinates to eliminate false detections before generating steering corrections for obstacle avoidance.
 
@@ -307,8 +307,8 @@ the reason we dont use only ultrasonic for navigation is that the sensor alone i
 the reason we dont use only compass for navigation is : we can only see the direction were heading not how far we are from the walls
 ### our solution :
 we combine both the sensor so we can keep our distance with the wall and also move in the direction we want
-### How u may ask? :
-we use a PD algorithm:
+##How does our even work?:
+
 
 we could have use two ultra sonic but we use hitech color sesnsor for 
 \diffrance between large motor and meduim motor
