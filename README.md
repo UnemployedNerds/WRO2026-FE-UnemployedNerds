@@ -311,7 +311,7 @@ we combine both the sensor so we can keep our distance with the wall and also mo
 ## Robots mechanical aspect 
 ### Rear wheels mechanism :
 we use a diffrencial mechanism like this
-!
+![diffrencial](IMG_20260706_191514.jpg)
 ### Steering mechanism :
 
 
