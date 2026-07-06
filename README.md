@@ -307,7 +307,9 @@ the reason we dont use only ultrasonic for navigation is that the sensor alone i
 the reason we dont use only compass for navigation is : we can only see the direction were heading not how far we are from the walls
 ### our solution :
 we combine both the sensor so we can keep our distance with the wall and also move in the direction we want
-##How does our even work?:
+## Robot 
+## Robots mechanical aspect :
+
 
 
 we could have use two ultra sonic but we use hitech color sesnsor for 
