@@ -266,6 +266,36 @@ Pixy2 achieved approximately **97% detection accuracy** during testing, resultin
 - **Reliable Color Detection** – Accurately tracks pre-trained color signatures under varying lighting conditions.
 - **Compact & Efficient** – Lightweight, low-power, and designed specifically for robotics.
 ## Ultra sonic sensor 
+The LEGO Mindstorms EV3 Ultrasonic Sensor measures the distance to objects without making physical contact. It works by emitting high-frequency ultrasonic sound waves (above the range of human hearing) and measuring the time it takes for the sound to bounce off an object and return to the sensor. Using the speed of sound, the EV3 calculates the distance between the sensor and the object.
+
+### How It Works
+
+1. The sensor emits a short ultrasonic pulse.
+2. The sound wave travels through the air.
+3. When the wave hits an object, it reflects back to the sensor.
+4. The sensor measures the time between sending and receiving the pulse.
+5. The EV3 calculates the distance using the speed of sound.
+
+### Features
+
+- **Measurement Range:** Approximately **3–250 cm**
+- **Contact-Free Detection:** Measures distance without touching objects.
+- **Real-Time Measurements:** Provides fast updates for autonomous navigation.
+- **Wide Detection Angle:** Detects objects within a broad field of view.
+- **Easy Integration:** Fully compatible with the LEGO Mindstorms EV3 platform.
+
+### Common Applications
+
+- Obstacle detection and avoidance
+- Wall following
+- Distance measurement
+- Autonomous robot navigation
+
+### Advantages
+
+- Accurate and reliable for most robotics applications.
+- Simple to program and integrate.
+- Works in both bright and dark environments since it uses sound instead of light.
 
 why we use ultra sonic
 
