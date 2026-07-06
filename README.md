@@ -265,6 +265,7 @@ Pixy2 achieved approximately **97% detection accuracy** during testing, resultin
 - **Easy Integration** – Supports I2C, SPI, UART, and USB communication.
 - **Reliable Color Detection** – Accurately tracks pre-trained color signatures under varying lighting conditions.
 - **Compact & Efficient** – Lightweight, low-power, and designed specifically for robotics.
+## Ultra sonic sensor 
 
 why we use ultra sonic
 
