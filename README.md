@@ -258,7 +258,13 @@ Accurate color calibration in **PixyMon v2** was essential for reliable detectio
 Pixy2 achieved approximately **97% detection accuracy** during testing, resulting in smoother steering corrections, more reliable obstacle avoidance, and fewer collisions throughout autonomous operation.
 
 
-why we use piximoon camera insted of other camera
+### why we use the pixy2 camera insted of other vision sensors
+- **Onboard Processing** – Reduces the computational load on the main controller.
+- **Fast Performance** – Up to 60 FPS for quick object detection and tracking.
+- **Low Latency** – Provides fast response for real-time robotics applications.
+- **Easy Integration** – Supports I2C, SPI, UART, and USB communication.
+- **Reliable Color Detection** – Accurately tracks pre-trained color signatures under varying lighting conditions.
+- **Compact & Efficient** – Lightweight, low-power, and designed specifically for robotics.
 
 why we use ultra sonic
 
