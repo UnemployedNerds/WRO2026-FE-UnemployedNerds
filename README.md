@@ -308,7 +308,11 @@ the reason we dont use only compass for navigation is : we can only see the dire
 ### our solution :
 we combine both the sensor so we can keep our distance with the wall and also move in the direction we want
 ## Robot 
-## Robots mechanical aspect :
+## Robots mechanical aspect 
+### Rear wheels mechanism :
+we use a diffrencial mechanism like this
+!
+### Steering mechanism :
 
 
 
