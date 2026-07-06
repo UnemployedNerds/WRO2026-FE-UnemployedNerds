@@ -297,11 +297,12 @@ The LEGO Mindstorms EV3 Ultrasonic Sensor measures the distance to objects witho
 - Simple to program and integrate.
 - Works in both bright and dark environments since it uses sound instead of light.
 
-why we use ultra sonic
+### Why we use the ultra sonic sensor
+We use the ultrasonic sensor for wall following and navigation throughout the challenge 
 
+## Importance of using compass and ultrasonic coombined
+### What happens if we only use ultrasonic :
 
-
-importance of using compass and ultra sonic 
 the reason we dont use only ulyrasonic for navigation
 we could have use two ultra sonic but we use hitech color sesnsor for 
 \diffrance between large motor and meduim motor
