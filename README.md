@@ -320,7 +320,7 @@ the diffrencial is connected to a rod that is spinning at a gear ratio of 24:8 s
 we used a lego EV3 medium motor for spinning the diffrencial , why not use a large motor u may ask?
 ### difrence between the large and medium motor and why we used the medium over the large? :
 - diffrence :
-  the large motor is slower but it prodouces move power
+  the large motor is slower but it prodouces more power
   
 - speed :
   speed is a huge factor in both the open and obstacle test while the large motor prodouces alot of power it isnt useful for the speed factor bcz its slower than medium motor
