@@ -310,10 +310,12 @@ we combine both the sensor so we can keep our distance with the wall and also mo
 ## Robot 
 ## Robots mechanical aspect 
 ### Rear wheels mechanism 
-we use a diffrencial mechanism like this :
+we use a diffrencial mechanism like this to move the robot forward or backwards:
 
 
 ![diffrencial](images/diffrencialrobo.png)
+
+the diffrencial is connected to a rod that is spinning at a gear ratio of 24:8 so its prodoucing 3x the speed that the motor is inputing
 ### Steering mechanism :
 
 
