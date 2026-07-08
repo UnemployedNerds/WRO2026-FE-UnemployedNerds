@@ -324,8 +324,13 @@ we used a lego EV3 medium motor for spinning the diffrencial , why not use a lar
   
 - speed :
   speed is a huge factor in both the open and obstacle test while the large motor prodouces alot of power it isnt useful for the speed factor bcz its slower than medium motor
-  the medium motor is faster than the large motor and our gear ratio for the diffrencial combined with the medium motor allows us to finish the tests faster , our avg time completing the open challenge is 36-40 secs thanks to this
+  the medium motor is faster than the large motor and our gear ratio for the diffrencial combined with the medium motor allows us to finish the tests faster , our avg time completing the open challenge is 36-40 secs   thanks to this
+- size :
+- size is also a huge factor , a large motor is almost twice the size of a medium motor we cannot easily fit the motor  on our robots structure bcz it will excueed the length limit
 ### Steering mechanism :
+we use a simple steering mechanism like this :
+the motor spins a 16 ridged gear to spin a 64 ridged gear which spins the wheels
+
 
 
 
