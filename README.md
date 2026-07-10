@@ -363,7 +363,8 @@ so the code for our open challenge is 3 parts
   
   
   ![openchallenge](images/openchallenge.png)
-  
+  -
+  so the area circled in purple are the starting variables, the variables named kp and kd are the constants multiplied in the steering PD formula , the variable named 4 is storing the value that the ultrasonic sensor reads in cm
 
 we could have use two ultra sonic but we use hitech color sesnsor for 
 
