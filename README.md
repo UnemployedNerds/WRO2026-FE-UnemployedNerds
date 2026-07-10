@@ -344,13 +344,15 @@ we use lego mindstorm ev3 for coding the robot
 so the code for our open challenge is 3 parts
 - part 1 : the setup
   ![setup](images/setup)
- what setup does is that first it moves the all the way to the right then all the way to the left then it measures how much the wheels have traveled the takes the value and divides the value in 2 and gives it to the steering value in servo
-- part 2 : Servo
-  the servo handles everything it handles the rear wheels
+ what setup does is that first it moves the all the way to the right then all the way to the left then it measures how much the wheels have traveled the takes the value and divides the value in 2 and gives it to the steering value in servo to straighten the wheels
+- part 2 : Servo , servo handles everything
+  ### rearwheel code
   ![rearwheels](images/rearwheels)
   -
   so here we handle the robots speed
   we take a power value multiply it by -1 ( why -1? cuz we messed up with the gears and stuff) and give it to the rotation speed of motor D
+  -
+  ### steering code
   ![steering](images/steerPD)
   so for steering the robot we dont just give a number to the motor and call it steering , we use a PD algorithm like the picture is showing
   
