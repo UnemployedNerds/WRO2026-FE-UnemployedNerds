@@ -348,6 +348,7 @@ so the code for our open challenge is 3 parts
 - part 2 : Servo
   the servo handles everything it handles the rear wheels
   ![rearwheels](images/rearwheels)
+  -
   so here we handle the robots speed
   we take a power value multiply it by -1 ( why -1? cuz we messed up with the gears and stuff) and give it to the rotation speed of motor D
   ![steering](images/steerPD)
