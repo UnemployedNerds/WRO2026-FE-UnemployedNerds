@@ -331,7 +331,28 @@ we used a lego EV3 medium motor for spinning the diffrencial , why not use a lar
 we use a simple steering mechanism like this :
 the motor spins a 16 ridged gear to spin a 64 ridged gear which spins the wheels
 
+## Robot Software aspect
+### Code platform
+we use lego mindstorm ev3 for coding the robot
+- pictures of lego mindstorm ev3 :
+  ![]()
 
+### libraries
+- all the libraries used will be uploaded
+## Code explained
+### Open challenge
+so the code for our open challenge is 3 parts
+- part 1 : the setup
+  ![setup]()
+ what setup does is that first it moves the all the way to the right then all the way to the left then it measures how much the wheels have traveled the takes the value and divides the value in 2 and gives it to the steering value in servo
+- part 2 : Servo
+  the servo handles everything it handles the rear wheels
+  ![rearwheels]()
+  so here we handle the robots speed
+  we take a power value multiply it by -1 ( why -1? cuz we messed up with the gears and stuff) and give it to the rotation speed of motor D
+  ![steering]()
+  so for steering the robot we dont just give a number to the motor and call it steering , we use a PD algorithm like the picture is showing
+  
 
 
 we could have use two ultra sonic but we use hitech color sesnsor for 
