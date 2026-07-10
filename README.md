@@ -358,11 +358,12 @@ so the code for our open challenge is 3 parts
   -
   ![servo](images/servo)
   heres servo fully, the two codes run simultaneously together creating the servo
-  -
+  
   - part 3 : open challenge management
-  - 
-  - 
+  
+  
   ![openchallenge](images/openchallenge)
+  
 
 we could have use two ultra sonic but we use hitech color sesnsor for 
 
