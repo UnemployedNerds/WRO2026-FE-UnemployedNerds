@@ -355,8 +355,14 @@ so the code for our open challenge is 3 parts
   ### steering code
   ![steering](images/steerPD)
   so for steering the robot we dont just give a number to the motor and call it steering , we use a PD algorithm like the picture is showing
-  
-
+  -
+  ![servo](images/servo)
+  heres servo fully, the two codes run simultaneously together creating the servo
+  -
+  - part 3 : open challenge management
+  - 
+  - 
+  ![openchallenge](images/openchallenge)
 
 we could have use two ultra sonic but we use hitech color sesnsor for 
 
