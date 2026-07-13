@@ -366,7 +366,9 @@ so the code for our open challenge is 3 parts
   -
   so the area circled in purple are the starting variables, the variables named kp and kd are the constants multiplied in the steering PD formula , the variable named 4 is storing the value that the ultrasonic sensor reads in cm , power is basically speed and steer is the steering value in general
   ### CCW and CW
-  so areas circled in
+  so areas circled in blue and orange are our main blocks for handling the open challenge
+  the area circled in blue , CCW or Counter Clock Wise is in the job of handling the round when its counter clock wise
+  ### CCW
 
 we could have use two ultra sonic but we use hitech color sesnsor for 
 
