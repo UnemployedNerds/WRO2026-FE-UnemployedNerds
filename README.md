@@ -370,6 +370,10 @@ so the code for our open challenge is 3 parts
   the area circled in blue , CCW or Counter Clock Wise is in the job of handling the round when its counter clock wise
   ### CCW
   so each CCW and CW blocks are mainly 2 parts
+  - first part :
+  
+  ![CCW](images/CCW)
+
 we could have use two ultra sonic but we use hitech color sesnsor for 
 
 
