@@ -386,6 +386,8 @@ so the code for our open challenge is 3 parts
     the green one resets the d motor value to zero
     the brown one is the steering value variable
     and the other one basically says wait until the motors moved X( the input value) degrees and then do what ever is left
+  ### 2nd part of CCW
+    ![ccw](images/ccwpart2.png)
 we could have use two ultra sonic but we use hitech color sesnsor for 
 
 
