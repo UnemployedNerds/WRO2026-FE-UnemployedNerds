@@ -152,7 +152,7 @@ Robot completes laps while avoiding green (left) and red (right) pillars, then p
 - open challenge
 (place vid here)
 
-- obstacle challenge
+- obstacle challengee
 (place vid here)
 
 - YouTube Explanation Video  
