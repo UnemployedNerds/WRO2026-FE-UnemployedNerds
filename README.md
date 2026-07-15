@@ -377,7 +377,9 @@ so the code for our open challenge is 3 parts
    this part basically the motor in control of the ultrasonic sensor in left so the ultrasonic can follow the non changable wall ( the outside wall)
   - the part circled in green :
     this part measures how much the ultrasonic sensor is reading and makes a desicion for steering the wheel based on that and its connected to a switch for the desicion making (like the switches in C++)
-  - 
+  - the part circled in blue :
+    this block basically gives a steering value and tells the D motors how much to move forward or backwards
+    ![move](images/motordriver.png)
 we could have use two ultra sonic but we use hitech color sesnsor for 
 
 
