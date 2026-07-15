@@ -2,6 +2,51 @@
 
 # WRO2026-FE-UnemployedNerds
 Repository of UnemployedNerds for the 2026 Future Engineers WRO iran national competition 
+# 📑 Table of Contents
+
+- [The Team](#the-team)
+  - [Araz Abbasi](#araz-abbasi)
+  - [Radin Mirsarvestani](#radin-mirsarvestani)
+  - [Benyamin Nikvarz](#benyamin-nikvarz)
+  - [Golo](#golo)
+  - [Our Team Photo](#our-team-photo)
+  - [Fun Photo](#fun-photo)
+
+- [Quick WRO Future Engineers Challenge Overview](#quick-wro-future-engineers-challenge-overview)
+  - [Open Challenge](#open-challenge)
+  - [Obstacle Challenge](#obstacle-challenge)
+
+- [Robot Photos](#robot-photos)
+
+- [Videos](#videos)
+
+- [Platform and Components Used](#platform-and-components-used)
+  - [Why We Chose EV3 Brick for the Brain of Our Robot](#why-we-chose-ev3-brick-for-the-brain-of-our-robot)
+  - [Components and Sensors](#components-and-sensors)
+    - [EV3 Medium Motor](#ev3-medium-motor)
+    - [HiTechnic Compass](#hi-technic-compasss)
+    - [HiTechnic Color Sensor](#hitechnic-color-sensor)
+    - [Pixy2 Vision Sensor](#pixy2-vision-sensor)
+    - [Ultra Sonic Sensor](#ultra-sonic-sensor)
+    - [Importance of Using Compass and Ultrasonic Combined](#importance-of-using-compass-and-ultrasonic-coombined)
+
+- [Robot](#robot)
+  - [Robot's Mechanical Aspect](#robots-mechanical-aspect)
+    - [Rear Wheels Mechanism](#rear-wheels-mechanism)
+    - [Steering Mechanism](#steering-mechanism)
+
+  - [Robot Software Aspect](#robot-software-aspect)
+    - [Code Platform](#code-platform)
+    - [Libraries](#libraries)
+    - [Code Explained](#code-explained)
+      - [Open Challenge](#open-challenge)
+        - [Setup](#setup)
+        - [Servo](#servo)
+          - [Rear Wheel Code](#rearwheel-code)
+          - [Steering Code](#steering-code)
+        - [Open Challenge Management](#open-challenge-management)
+          - [CCW and CW](#ccw-and-cw)
+          - [CCW](#ccw)
 
 ## The Team
 
