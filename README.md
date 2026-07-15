@@ -380,6 +380,7 @@ so the code for our open challenge is 3 parts
   - the part circled in blue :
     this block basically gives a steering value and tells the D motors how much to move forward or backwards
     ![move](images/motordriver.png)
+    the part circled in blue are the input values 
 we could have use two ultra sonic but we use hitech color sesnsor for 
 
 
