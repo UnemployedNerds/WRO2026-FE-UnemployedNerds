@@ -392,6 +392,7 @@ so the code for our open challenge is 3 parts
     this is a loop that runs 11 times , our piece of code is only for 1/4th of a round so we put it in a loop that runs 11 times for 3 rounds ( why 11 and not 12? at the first part it goes 1/4th of a round so that counts as 1)
   - the area circled in orange :
     this is the part where we follow the walls and turn when we detect a line
+    for tracking the walls we use a PD controller like this
 we could have use two ultra sonic but we use hitech color sesnsor for 
 
 
