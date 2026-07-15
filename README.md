@@ -388,6 +388,8 @@ so the code for our open challenge is 3 parts
     and the other one basically says wait until the motors moved X( the input value) degrees and then do what ever is left
   ### 2nd part of CCW
     ![ccw](images/ccwpart2.png)
+  - the area circled in purple :
+    this is a loop that runs 11 times , our piece of code is only for 1/4th of a round so we put it in a loop that runs 11 times for 3 rounds ( why 11 and not 12? at the first part it goes 1/4th of a round so that counts as 1)
 we could have use two ultra sonic but we use hitech color sesnsor for 
 
 
