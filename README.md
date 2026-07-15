@@ -393,6 +393,11 @@ so the code for our open challenge is 3 parts
   - the area circled in orange :
     this is the part where we follow the walls and turn when we detect a line
     for tracking the walls we use a PD controller like this
+    ![wf](images/WF4.png)
+    its the same as the compasss PD which i exlpained but with the diffrence of that when we enter a CCW block the boolean variable named CW turns false and the Kp and Kd constants signs are the opisite of the CW block
+    so here the CW variable is false so it enters the false switch
+  - the rest of the area circled in purple :
+    so the action of the loop circled in orange goes on until the color sensor sees the color blue and then it escapes the loops and goes onto
 we could have use two ultra sonic but we use hitech color sesnsor for 
 
 
