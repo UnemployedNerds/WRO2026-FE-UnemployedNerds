@@ -2,7 +2,7 @@
 
 # WRO2026-FE-UnemployedNerds
 Repository of UnemployedNerds for the 2026 Future Engineers WRO iran national competition 
-# 📑 Table of Contents
+#  Table of Contents
 
 - [The Team](#the-team)
   - [Araz Abbasi](#araz-abbasi)
@@ -47,6 +47,14 @@ Repository of UnemployedNerds for the 2026 Future Engineers WRO iran national co
         - [Open Challenge Management](#open-challenge-management)
           - [CCW and CW](#ccw-and-cw)
           - [CCW](#ccw)
+    - [Obstacle Challenge](#obstacle-challenge)
+      - [Setup](#1-setup)
+      - [Servo](#2-servo)
+      - [Getting Out of the Parking Zone](#3-getting-out-of-the-parking-zone)
+      - [Deciding the Compass Numbers](#4-deciding-the-compass-numbers)
+      - [CCW and CW Blocks](#5-ccw-and-cw-blocks)
+      - [Obstacle Management Strategy](#6-obstacle-management-strategy)
+      - [Getting Into the Parking Zone](#7-getting-into-the-parking-zone)
 
 ## The Team
 
@@ -442,7 +450,54 @@ so the code for our open challenge is 3 parts
     its the same as the compasss PD which i exlpained but with the diffrence of that when we enter a CCW block the boolean variable named CW turns false and the Kp and Kd constants signs are the opisite of the CW block
     so here the CW variable is false so it enters the false switch
   - the rest of the area circled in purple :
-    so the action of the loop circled in orange goes on until the color sensor sees the color blue and then it escapes the loops and goes onto
-we could have use two ultra sonic but we use hitech color sesnsor for 
+    so the action of the loop circled in orange goes on until the color sensor sees the color blue and then it escapes the loops and goes onto the next task
+    which uses a move block to steer the wheels and move
+
+
+## Obstacle Challenge
+
+The obstacle challenge code is divided into seven main sections. Separating the program into independent modules makes the code easier to understand, debug, and improve. Each section is responsible for a specific task during the robot's autonomous run.
+
+### 1. Setup
+
+*Write your explanation here.*
+
+---
+
+### 2. Servo
+
+*Write your explanation here.*
+
+---
+
+### 3. Getting Out of the Parking Zone
+
+*Write your explanation here.*
+
+---
+
+### 4. Deciding the Compass Numbers
+
+*Write your explanation here.*
+
+---
+
+### 5. CCW and CW Blocks
+
+*Write your explanation here.*
+
+---
+
+### 6. Obstacle Management Strategy
+
+This section explains the overall strategy used to detect, classify, and avoid obstacles while completing the challenge.
+
+*Write your explanation here.*
+
+---
+
+### 7. Getting Into the Parking Zone
+
+*Write your explanation here.*
 
 
