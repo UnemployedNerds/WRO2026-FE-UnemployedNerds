@@ -372,7 +372,7 @@ so the code for our open challenge is 3 parts
   so each CCW and CW blocks are mainly 2 parts
   - first part :
   
-  ![CCW](images/CCW)
+  ![CCW](images/rlccw)
 
 we could have use two ultra sonic but we use hitech color sesnsor for 
 
