@@ -47,15 +47,14 @@ Repository of UnemployedNerds for the 2026 Future Engineers WRO iran national co
         - [Open Challenge Management](#open-challenge-management)
           - [CCW and CW](#ccw-and-cw)
           - [CCW](#ccw)
-    - [Obstacle Challenge](#obstacle-challenge)
-      - [Setup](#1-setup)
-      - [Servo](#2-servo)
-      - [Getting Out of the Parking Zone](#3-getting-out-of-the-parking-zone)
-      - [Deciding the Compass Numbers](#4-deciding-the-compass-numbers)
-      - [CCW and CW Blocks](#5-ccw-and-cw-blocks)
-      - [Obstacle Management Strategy](#6-obstacle-management-strategy)
-      - [Getting Into the Parking Zone](#7-getting-into-the-parking-zone)
-
+- [Obstacle Challenge Code](#obstacle-challenge-code)
+  - [Setup](#1-setup)
+  - [Servo](#2-servo)
+  - [Getting Out of the Parking Zone](#3-getting-out-of-the-parking-zone)
+  - [Deciding the Compass Numbers](#4-deciding-the-compass-numbers)
+  - [CCW and CW Blocks](#5-ccw-and-cw-blocks)
+  - [Obstacle Management Strategy](#6-obstacle-management-strategy)
+  - [Getting Into the Parking Zone](#7-getting-into-the-parking-zone)
 ## The Team
 
 
@@ -454,7 +453,7 @@ so the code for our open challenge is 3 parts
     which uses a move block to steer the wheels and move
 
 
-## Obstacle Challenge
+## Obstacle Challenge Code
 
 The obstacle challenge code is divided into seven main sections. Separating the program into independent modules makes the code easier to understand, debug, and improve. Each section is responsible for a specific task during the robot's autonomous run.
 
