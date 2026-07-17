@@ -344,154 +344,244 @@ The sensor is mounted close to the ground to maximize detection accuracy. It det
 
 The color sensor reliably detects the blue and orange strips on the competition field, allowing the robot to determine when to perform turns and other navigation actions.
 ## Pixy2 Vision Sensor
+
 ![pixycam](images/pixy2.jpg)
+
 ### Specifications
 
 | **Property** | **Value** |
 |--------------|-----------|
-| Type | Vision Sensor |
+| Type | Smart Vision Sensor |
 | Microcontroller | NXP LPC4330 (Dual-Core ARM Cortex-M4/M0) |
-| Resolution | 1296×976 (processed at 640×480) |
+| Resolution | 1296 × 976 (processed internally at 640 × 480) |
 | Frame Rate | Up to 60 FPS |
 | Field of View | 80° Horizontal, 40° Vertical |
-| Power Supply | 5 V, 130–170 mA |
-| Interface | Custom I2C (port 4) |
-| Color Signatures | Up to 7 programmable |
-| Features | Object Detection, Color Tracking, Line Tracking, Barcode Detection |
+| Operating Voltage | 5 V |
+| Current Consumption | 130–170 mA |
+| Communication | Custom I2C (Port 4) |
+| Color Signatures | Up to 7 programmable signatures |
+| Features | Color Recognition, Object Tracking, Line Tracking, Barcode Detection |
 
 ### Overview
 
-The Pixy2 Vision Sensor provides real-time object recognition and color tracking while processing images internally, reducing the computational load on the EV3 Brick. It is mounted above the robot and connected through a custom I2C interface to the EV3 sensor port (`port 4`).
+The Pixy2 Vision Sensor performs real-time image processing internally, allowing our robot to detect colored obstacles without placing additional computational load on the EV3 Brick. This enables fast and reliable obstacle detection while maintaining high driving speeds.
 
 ### Implementation
 
-For the Obstacle Challenge, Pixy2 detects:
+For the Obstacle Challenge, the Pixy2 detects:
 
--  **Green Pillars** – Signature 2
--  **Red Pillars** – Signature 1
+- **Red Pillars** – Signature 1
+- **Green Pillars** – Signature 2
 
-The camera operates at up to **60 FPS**, providing fast and reliable object detection. Objects are filtered using their **X** and **Y** coordinates to eliminate false detections before generating steering corrections for obstacle avoidance.
+The camera operates at up to **60 frames per second**, providing rapid detection and tracking of obstacles. Before making steering decisions, detected objects are filtered using their X and Y coordinates to eliminate false detections and improve reliability.
 
 ### Advantages
 
-- High-speed processing (up to 60 FPS)
-- Detects up to seven programmable color signatures
-- Built-in image processing reduces EV3 CPU usage
-- Supports line tracking and barcode detection
-- Easy integration through I2C
+- High-speed image processing
+- Up to 60 FPS
+- Supports seven programmable color signatures
+- Onboard image processing reduces EV3 CPU usage
+- Supports line tracking and barcode recognition
+- Easy integration using I2C
 
 ### Limitations
 
-- Performance depends on lighting conditions
-- Requires color calibration using PixyMon
-- Similar colors may occasionally be misidentified
+- Sensitive to lighting conditions
+- Requires calibration using PixyMon
+- Similar colors may occasionally produce false detections
 
 ### Lessons Learned
 
-Accurate color calibration in **PixyMon v2** was essential for reliable detection. Maintaining consistent lighting conditions significantly improved performance. Future versions of the robot may utilize Pixy2's built-in line-tracking mode for the Open Challenge.
+During development, we found that proper calibration using **PixyMon v2** significantly improved detection accuracy. Consistent lighting conditions also played an important role in achieving reliable obstacle recognition.
 
-### Implementation Impact
+### Performance
 
-Pixy2 achieved approximately **97% detection accuracy** during testing, resulting in smoother steering corrections, more reliable obstacle avoidance, and fewer collisions throughout autonomous operation.
+During testing, the Pixy2 achieved approximately **97% detection accuracy**, resulting in smoother steering corrections, fewer collisions, and more consistent autonomous runs.
 
+### Why We Chose Pixy2
 
-### why we use the pixy2 camera insted of other vision sensors
-- **Onboard Processing** – Reduces the computational load on the main controller.
-- **Fast Performance** – Up to 60 FPS for quick object detection and tracking.
-- **Low Latency** – Provides fast response for real-time robotics applications.
-- **Easy Integration** – Supports I2C, SPI, UART, and USB communication.
-- **Reliable Color Detection** – Accurately tracks pre-trained color signatures under varying lighting conditions.
-- **Compact & Efficient** – Lightweight, low-power, and designed specifically for robotics.
-## Ultra sonic sensor 
-The LEGO Mindstorms EV3 Ultrasonic Sensor measures the distance to objects without making physical contact. It works by emitting high-frequency ultrasonic sound waves (above the range of human hearing) and measuring the time it takes for the sound to bounce off an object and return to the sensor. Using the speed of sound, the EV3 calculates the distance between the sensor and the object.
+We evaluated several vision solutions before selecting the Pixy2. It provided the best balance between speed, simplicity, and reliability for the EV3 platform.
 
-### How It Works
+Key advantages include:
 
-1. The sensor emits a short ultrasonic pulse.
+- Built-in image processing
+- Minimal CPU usage
+- Low communication latency
+- High frame rate (60 FPS)
+- Reliable color tracking
+- Compact and lightweight design
+- Excellent compatibility with the EV3 platform
+
+---
+
+## LEGO EV3 Ultrasonic Sensor
+
+### Overview
+
+The LEGO EV3 Ultrasonic Sensor measures the distance to nearby objects without physical contact by emitting ultrasonic sound waves and measuring the time required for the echo to return.
+
+This sensor is one of the primary components used for wall following and navigation during both competition challenges.
+
+### Operating Principle
+
+The sensor operates using the following process:
+
+1. An ultrasonic pulse is emitted.
 2. The sound wave travels through the air.
-3. When the wave hits an object, it reflects back to the sensor.
-4. The sensor measures the time between sending and receiving the pulse.
-5. The EV3 calculates the distance using the speed of sound.
+3. The wave reflects off nearby objects.
+4. The reflected signal returns to the sensor.
+5. The EV3 calculates the distance using the measured travel time.
 
 ### Features
 
-- **Measurement Range:** Approximately **3–250 cm**
-- **Contact-Free Detection:** Measures distance without touching objects.
-- **Real-Time Measurements:** Provides fast updates for autonomous navigation.
-- **Wide Detection Angle:** Detects objects within a broad field of view.
-- **Easy Integration:** Fully compatible with the LEGO Mindstorms EV3 platform.
+- Measurement range: **3–250 cm**
+- Contact-free distance measurement
+- Fast real-time updates
+- Wide detection angle
+- Fully compatible with LEGO EV3
 
-### Common Applications
+### Typical Applications
 
-- Obstacle detection and avoidance
 - Wall following
+- Obstacle detection
 - Distance measurement
-- Autonomous robot navigation
+- Autonomous navigation
 
 ### Advantages
 
-- Accurate and reliable for most robotics applications.
-- Simple to program and integrate.
-- Works in both bright and dark environments since it uses sound instead of light.
+- Reliable distance measurements
+- Easy to integrate and program
+- Operates in both bright and dark environments
+- Independent of ambient lighting
 
-### Why we use the ultra sonic sensor
-We use the ultrasonic sensor for wall following and navigation throughout the challenge 
+### Why We Use It
 
-## Importance of using compass and ultrasonic coombined
-### What happens if we only use ultrasonic :
-the reason we dont use only ultrasonic for navigation is that the sensor alone isnt reliable bcz the waves can scatter etc
-### What happens if we only use compass :
-the reason we dont use only compass for navigation is : we can only see the direction were heading not how far we are from the walls
-### our solution :
-we combine both the sensor so we can keep our distance with the wall and also move in the direction we want
-## Robot 
-## Robots mechanical aspect 
-### Rear wheels mechanism 
-we use a diffrencial mechanism like this to move the robot forward or backwards:
+The ultrasonic sensor continuously measures the robot's distance from the surrounding walls, allowing precise wall-following and stable navigation throughout the course.
 
+---
+
+## Why We Combine the Compass and Ultrasonic Sensors
+
+Neither sensor is sufficient on its own for reliable navigation.
+
+### Using Only the Ultrasonic Sensor
+
+Although the ultrasonic sensor accurately measures the distance to nearby walls, it provides no information about the robot's orientation. Additionally, ultrasonic readings may occasionally fluctuate due to reflections, angled surfaces, or environmental noise.
+
+### Using Only the Compass Sensor
+
+The compass accurately measures the robot's heading but cannot determine its position relative to the walls. As a result, the robot could maintain the correct heading while gradually drifting away from the desired path.
+
+### Our Solution
+
+We combine both sensors to take advantage of their complementary strengths.
+
+- The **compass** maintains the robot's heading.
+- The **ultrasonic sensor** maintains a constant distance from the wall.
+
+This sensor fusion approach provides significantly more stable navigation than either sensor could achieve independently. Throughout testing, it greatly improved wall-following accuracy and reduced cumulative positioning errors.
+
+---
+
+# Robot
+
+# Robot Mechanical Design
+
+## Rear Wheel Drive Mechanism
+
+Our robot uses a rear-wheel differential drive system powered by a single EV3 Medium Motor.
 
 ![diffrencial](images/diffrencialrobo.png)
 
-the diffrencial is connected to a rod that is spinning at a gear ratio of 24:8 so its prodoucing 3x the speed that the motor is inputing
+The differential is connected through a **24:8 gear ratio**, increasing the rotational speed by a factor of three before transferring power to the rear wheels.
 
-we used a lego EV3 medium motor for spinning the diffrencial , why not use a large motor u may ask?
-### difrence between the large and medium motor and why we used the medium over the large? :
-- diffrence :
-  the large motor is slower but it prodouces more power
-  
-- speed :
-  speed is a huge factor in both the open and obstacle test while the large motor prodouces alot of power it isnt useful for the speed factor bcz its slower than medium motor
-  the medium motor is faster than the large motor and our gear ratio for the diffrencial combined with the medium motor allows us to finish the tests faster , our avg time completing the open challenge is 36-40 secs   thanks to this
-- size :
-- size is also a huge factor , a large motor is almost twice the size of a medium motor we cannot easily fit the motor  on our robots structure bcz it will excueed the length limit
-### Steering mechanism :
-we use a simple steering mechanism like this :
-the motor spins a 16 ridged gear to spin a 64 ridged gear which spins the wheels
+This configuration allows the robot to achieve higher speeds while maintaining sufficient torque for acceleration.
+
+### Why We Chose the Medium Motor
+
+A common question is why we selected the EV3 Medium Motor instead of the Large Motor.
+
+#### Comparison
+
+| EV3 Medium Motor | EV3 Large Motor |
+|------------------|-----------------|
+| Higher speed | Higher torque |
+| Smaller size | Larger size |
+| Better for lightweight robots | Better for heavy-duty applications |
+
+### Speed
+
+Speed is a critical factor in both the Open Challenge and the Obstacle Challenge.
+
+Although the Large Motor produces greater torque, it rotates more slowly. The Medium Motor's higher rotational speed, combined with our gear ratio, enables the robot to complete the Open Challenge in approximately **36–40 seconds** during testing.
+
+### Compact Design
+
+The Medium Motor is significantly smaller than the Large Motor, allowing us to keep the robot within the WRO size constraints while simplifying the drivetrain layout.
+
+---
+
+## Steering Mechanism
+
+Our steering system uses a simple but reliable gear reduction mechanism.
+
+The steering motor drives a **16-tooth gear**, which meshes with a **64-tooth gear** attached to the steering linkage.
+
+This reduction provides:
+
+- Increased steering precision
+- Greater steering torque
+- Smooth and repeatable steering movements
+
+The simplicity of this mechanism also improves reliability and makes maintenance easier during competitions.
+
+---
+
 ## Mobility Management
 
-Our robot’s mobility architecture is designed to balance the non-holonomic constraints of a car-like platform with the need for high-speed, precision path-tracking. The design process focused on three critical areas: drivetrain efficiency, steering geometry, and dynamic stability.
+Our robot's mobility system was designed to maximize speed while maintaining precise and stable navigation. Throughout development, we focused on three key engineering objectives:
 
-### 1. Drivetrain & Gear System Optimization
-The drivetrain was developed to optimize the torque-to-speed ratio, ensuring consistent performance across varying track segments.
+- Optimizing drivetrain efficiency
+- Improving steering precision
+- Increasing overall chassis stability
 
-*   Engineering Challenge: Initial experiments with a high-speed 40T to 8T gear ratio revealed that while peak theoretical velocity was high, the robot struggled to overcome static inertia. The motors frequently reached their stall torque limit during acceleration, leading to poor start times and delayed recovery after sharp turns.
-*   Iterative Optimization: We shifted from a focus on "top speed" to "accelerative efficiency." By testing a range of gear ratios, we selected a configuration (Final Ratio: **[insert ratio here]**) that provides sufficient torque to overcome drivetrain losses while maintaining high cruise velocity.
-*   Result: This balance ensures the robot maintains constant acceleration throughout the course, prevents the motor driver from overheating under load, and improves the consistency of the robot’s PID controller by providing a more predictable speed curve.
+### 1. Drivetrain Optimization
 
-### 2. Steering System & Control Precision
-Steering accuracy is fundamental for a non-holonomic vehicle. Any mechanical error in the steering system introduces noise into our path-following algorithms.
+Early testing showed that extremely aggressive gear ratios produced high theoretical speeds but poor acceleration. The motors frequently stalled during starts and after sharp turns.
 
-*   The Rack-and-Pinion Limitation: We initially implemented a rack-and-pinion system for its compact profile. However, empirical testing identified backlash as a critical failure point. This mechanical play caused the steering angle to deviate from the commanded value, leading to oscillations in our trajectory and significant path-tracking errors.
-*   Custom Linkage Redesign: To solve this, we developed a custom linkage mechanism. This design provides higher structural stiffness and a near-linear relationship between motor PWM and steering angle.
-*   Impact on Control: By minimizing backlash, we achieved more reliable "return-to-center" behavior. This allows our control loop to function with higher gain without inducing instability, resulting in smoother obstacle avoidance and significantly reduced overshoot during high-speed maneuvers.
+After testing multiple gear ratios, we selected the configuration that provided the best compromise between acceleration, torque, and maximum speed.
 
-### 3. Chassis & Dynamic Stability
-To maintain traction and minimize sensor noise, we engineered the chassis with a focus on center-of-mass and structural rigidity.
+This optimization resulted in:
 
-*   Mass Centralization: We systematically lowered the Center of Gravity (CoG) by mounting the EV3 Brick and battery pack at the lowest possible point. This configuration minimizes body roll during rapid direction changes and ensures the tires maintain optimal contact with the track surface.
-*   Reducing Polar Moment of Inertia: Heavy components were centralized longitudinally. By reducing the polar moment of inertia, we decreased the torque required by the steering motor to yaw the chassis. This makes the robot's directional response faster and more repeatable.
-*   Structural Integrity: The chassis frame is cross-braced to prevent structural flex. This rigidity is essential for consistent geometry, ensuring that wheel alignment remains stable regardless of acceleration or cornering forces, which is vital for long-term path-tracking accuracy.
+- Faster acceleration
+- More consistent lap times
+- Reduced motor stress
+- Improved controller stability
 
+### 2. Steering Precision
+
+Our first steering design used a rack-and-pinion mechanism.
+
+Although compact, testing revealed excessive backlash, causing steering inaccuracies and oscillations during high-speed driving.
+
+To solve this issue, we redesigned the steering linkage with a custom mechanism that significantly reduced mechanical play.
+
+As a result, we achieved:
+
+- More accurate steering angles
+- Better return-to-center performance
+- Reduced overshoot
+- Smoother obstacle avoidance
+
+### 3. Chassis Stability
+
+Maintaining a low center of gravity was one of our primary design goals.
+
+The EV3 Brick and battery pack were mounted as low as possible to reduce body roll during cornering.
+
+Heavy components were also positioned close to the center of the chassis, reducing rotational inertia and allowing the robot to change direction more quickly.
+
+Finally, the chassis was reinforced using cross-bracing to minimize structural flex and maintain consistent wheel alignment throughout each run.
 ***
 ## Robot Software aspect
 ### Code platform
