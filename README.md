@@ -143,106 +143,206 @@ In the Obstacle Challenge, the robot must complete multiple autonomous laps whil
 https://www.youtube.com/watch?v=XXXX
 
 
-## Platform and Components used
-#### Why we chose EV3 brick for the brain of our robot
+# Robot Photos
+
+Below are photographs of our robot from different angles to provide a complete overview of its mechanical design and construction.
+
+### Front View
+
+![frontpic]()
+
+### Rear View
+
+![backpic]()
+
+### Left Side
+
+![leftpic]()
+
+### Right Side
+
+![rightpic]()
+
+### Top View
+
+![toppic]()
+
+### Bottom View
+
+![bottompic]()
+
+---
+
+# Videos
+
+### Open Challenge
+
+*(Insert Open Challenge video here.)*
+
+### Obstacle Challenge
+
+*(Insert Obstacle Challenge video here.)*
+
+### Full Robot Explanation
+
+https://www.youtube.com/watch?v=XXXX
+
+---
+
+# Platform and Components Used
+
+## Why We Chose the LEGO EV3 Brick
+
 ![medmotor](images/ev3brick.jpg)
-- we chose EV3 for its simplicity and versitality , easy sensor integration and fast development and built in safty features
-### PROS AND CONS
-The LEGO EV3 Brick is a programmable robotics controller based on an ARM9 processor running a Linux-based operating system. It functions as the central control unit, managing sensor input, motor control, and autonomous robot operation.
-| **Pros** | **Cons** |
-|-----------|-----------|
-| Reliable and stable | Limited processing power |
-| Precise motor control | Low RAM compared to modern boards |
-| Easy sensor integration | No built-in Wi-Fi |
-| Supports multiple coding languages | Limited number of ports |
-| Large robotics community | Older hardware |
-| Fast to prototype with | More expensive for its performance |
-| Built-in screen, buttons, and speaker | Not ideal for AI or advanced vision tasks |
-| Expandable with Pico/Arduino | Discontinued by LEGO |
-- An ARM9 processor
+
+The LEGO Mindstorms EV3 Brick serves as the central controller of our robot. Although it is an older platform, we selected it because of its reliability, simplicity, and excellent compatibility with LEGO hardware and third-party sensors.
+
+The EV3 allowed us to rapidly prototype, test, and improve our robot throughout the development process while maintaining a stable and dependable control system.
+
+### Advantages
+
+- Reliable and stable platform
+- Easy integration with LEGO and third-party sensors
+- Precise motor control
+- Supports multiple programming languages
+- Large robotics community with extensive documentation
+- Fast development and debugging
+- Built-in display, buttons, and speaker
+- Expandable using external microcontrollers such as Arduino or Raspberry Pi Pico
+
+### Disadvantages
+
+- Limited processing power
+- Only 64 MB of RAM
+- Limited Flash storage
+- No built-in Wi-Fi
+- Limited number of sensor and motor ports
+- Discontinued by LEGO
+- Not suitable for advanced AI or computer vision applications
+
+### Technical Specifications
+
+The LEGO EV3 Brick features:
+
+- ARM9 Processor
 - 64 MB RAM
-- 16 MB Flash storage
-- A Linux-based operating system
-- USB, Bluetooth, and motor/sensor interfaces
+- 16 MB Flash Storage
+- Linux-based Operating System
+- USB and Bluetooth Connectivity
+- Four Sensor Ports
+- Four Motor Ports
 
-#### Components and sensors :
-### Motors :
+Despite its hardware limitations, the EV3 provides everything required for reliable autonomous navigation in the WRO Future Engineers competition.
 
-## EV3 Medium Motor
+---
+
+# Components and Sensors
+
+## Motors
+
+### LEGO EV3 Medium Motor
 
 ![medmotor](images/mediummotor.jpg)
-### Specifications
-- **Type:** DC Motor (Medium)
-- **Voltage:** 9 V
-- **Speed:** 160 RPM
-- **Torque:** 20 N·cm (effective torque ≈15 N·cm under the robot's 1.2 kg load)
-- **Weight:** 120 g
-- **Feature:** Provides propulsion (rear wheels) and steering (front wheels)
-# The usuage of medium motor in our robot : 
-- Steering
-- Controling the rear wheels
-- Moving the Ultrasonic sensor
-  
-### Sensors and modules :
-## Hi-technic compasss :
-![compass](images/compass.jpg)
-### Overview
-The HiTechnic Compass Sensor is a digital compass compatible with LEGO EV3 and NXT robots. It uses a built-in **3-axis magnetometer** to detect the Earth's magnetic field and determine the robot's heading.
 
-### How It Works
-The sensor continuously measures the Earth's magnetic field and calculates the robot's orientation, returning a heading between **0° and 359°**.
+### Specifications
+
+- **Type:** Medium DC Servo Motor
+- **Operating Voltage:** 9 V
+- **Maximum Speed:** 160 RPM
+- **Maximum Torque:** 20 N·cm
+- **Effective Torque Under Load:** Approximately 15 N·cm
+- **Weight:** 120 g
+
+### Purpose in Our Robot
+
+We use three EV3 Medium Motors:
+
+- Steering the front wheels
+- Driving the rear differential
+- Rotating the ultrasonic sensor during wall-following
+
+The medium motor provides an excellent balance between speed and torque, making it more suitable than the large EV3 motor for our lightweight robot.
+
+---
+
+# Sensors and Modules
+
+## HiTechnic Compass Sensor
+
+![compass](images/compass.jpg)
+
+### Overview
+
+The HiTechnic Compass Sensor is a digital compass designed for LEGO EV3 and NXT robots. It measures the Earth's magnetic field using an internal three-axis magnetometer, allowing the robot to determine its heading accurately.
+
+### Operating Principle
+
+The sensor continuously calculates the robot's heading and returns an angle between **0° and 359°**.
 
 - **0°** → North
 - **90°** → East
 - **180°** → South
 - **270°** → West
 
-This allows the robot to maintain a consistent heading and perform accurate turns, even if wheel slippage occurs.
+Unlike wheel encoders, the compass remains accurate even if wheel slippage occurs during turns.
 
 ### Advantages
+
 - High heading accuracy
-- Helps compensate for wheel slip
-- Fast real-time heading updates
-- Simple integration with EV3 programs
+- Excellent long-term stability
+- Real-time heading updates
+- Compensates for wheel slip
+- Easy integration with EV3
 
 ### Limitations
-- Sensitive to nearby magnets and metal objects
-- Can be affected by motor electromagnetic interference
-- Measures **magnetic north**, not true north
+
+- Sensitive to nearby magnetic fields
+- Can be affected by electric motors
+- Measures magnetic north rather than true north
 
 ### Implementation
-The compass sensor is mounted away from the drive motors to minimize magnetic interference. During autonomous operation, it provides continuous heading feedback, enabling precise turns and stable navigation throughout the robot's run.
-## why we use compass sensor :
-- we use the compass sensor for navigation and making the robot head into the direction we want
-  
+
+The compass sensor is mounted away from the drive motors to minimize magnetic interference. During autonomous operation, it continuously provides heading feedback, allowing our robot to perform accurate turns and maintain a stable driving direction.
+
+### Why We Use It
+
+The compass sensor enables the robot to maintain precise orientation throughout both challenges, even after collisions or wheel slip.
+
+---
+
 ## HiTechnic Color Sensor
+
 ![color](images/colorsensor.jpg)
 
 ### Overview
-The HiTechnic Color Sensor is a digital sensor compatible with LEGO EV3 and NXT robots. It detects the color and intensity of light reflected from nearby objects using built-in red, green, and blue (RGB) LEDs and photodiodes.
 
-### How It Works
-The sensor illuminates the target with its RGB LEDs and measures the reflected light. It then compares the detected values to identify the object's color or light intensity.
+The HiTechnic Color Sensor detects colors and reflected light intensity using integrated RGB LEDs and photodiodes. It is primarily responsible for detecting the blue and orange field markings used throughout the competition.
+
+### Operating Principle
+
+The sensor illuminates the surface with red, green, and blue light before measuring the reflected intensity. The measured values are then used to classify the detected color.
 
 ### Advantages
-- Detects multiple colors accurately
+
+- Accurate color recognition
+- Fast response time
 - Measures reflected light intensity
-- Fast response for real-time object detection
-- Easy integration with EV3 programs
+- Easy integration with EV3
 
 ### Limitations
-- Performance depends on ambient lighting
-- Sensor accuracy varies with distance from the object
-- Shiny or reflective surfaces can affect readings
-- Requires calibration for the best performance
+
+- Performance depends on lighting conditions
+- Sensor accuracy varies with distance
+- Reflective surfaces can affect readings
+- Requires calibration before competition
 
 ### Implementation
-The color sensor is mounted close to the ground to reliably detect colored field markers and surface changes. Its readings are used to trigger navigation events, identify zones, and improve the robot's decision-making during autonomous operation.
 
-### why we use color sensor :
-we use the color sensor for detecting the orange and blue strips on the map
+The sensor is mounted close to the ground to maximize detection accuracy. It detects colored markers that indicate turning points and navigation events.
 
+### Why We Use It
 
+The color sensor reliably detects the blue and orange strips on the competition field, allowing the robot to determine when to perform turns and other navigation actions.
 ## Pixy2 Vision Sensor
 ![pixycam](images/pixy2.jpg)
 ### Specifications
