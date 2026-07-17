@@ -893,6 +893,13 @@ The obstacle challenge code is divided into seven main sections. Separating the 
 
 ### 2. Servo
   ![servoOC](images/servoOCR.png)
+  - The part circled in blue :
+  this is the part that reads the color , X and Y cordinates,and width of the obstacle
+  as u can see it gives the information to multiple variables like X,Y,width,color
+  - The part in red is basically a steering PD like the one in the OPEN challenge
+  - The part in black is the speeding and power system just like the one in the open challenge
+  - The part in green mesuares the absloute value of the compass sensor and stores it into a variable
+  - note this that all the parts here run in an endless loop and make a servo
 
 
 ---
