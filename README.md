@@ -415,7 +415,7 @@ Key advantages include:
 ---
 
 ## LEGO EV3 Ultrasonic Sensor
-
+![ultrasonic](images/ultrasonic.jpg)
 ### Overview
 
 The LEGO EV3 Ultrasonic Sensor measures the distance to nearby objects without physical contact by emitting ultrasonic sound waves and measuring the time required for the echo to return.
