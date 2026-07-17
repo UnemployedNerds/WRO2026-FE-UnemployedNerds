@@ -3,29 +3,85 @@
 Repository of **Team UnemployedNerds** for the **2026 World Robot Olympiad (WRO) Future Engineers – Iran National Competition**.
 
 ---
-
 # Table of Contents
 
 - [The Team](#the-team)
   - [Araz Abbasi](#araz-abbasi)
   - [Radin Mirsarvestani](#radin-mirsarvestani)
   - [Benyamin Nikvarz](#benyamin-nikvarz)
-  - [Golo](#golo)
-  - [Our Team Photo](#our-team-photo)
+  - [Golo (Team Mascot)](#golo)
+  - [Team Photo](#our-team-photo)
   - [Fun Photo](#fun-photo)
 
-- [Quick WRO Future Engineers Challenge Overview](#quick-wro-future-engineers-challenge-overview)
+- [Competition Overview](#quick-wro-future-engineers-challenge-overview)
   - [Open Challenge](#open-challenge)
   - [Obstacle Challenge](#obstacle-challenge)
 
-- [Robot Photos](#robot-photos)
+- [Robot Gallery](#robot-photos)
+  - [Front View](#front-view)
+  - [Rear View](#rear-view)
+  - [Left Side](#left-side)
+  - [Right Side](#right-side)
+  - [Top View](#top-view)
+  - [Bottom View](#bottom-view)
 
 - [Videos](#videos)
+  - [Open Challenge Run](#open-challenge-run)
+  - [Obstacle Challenge Run](#obstacle-challenge-run)
+  - [Robot Explanation Video](#full-robot-explanation)
 
 - [Platform and Components Used](#platform-and-components-used)
-- [Robot](#robot)
-- [Robot Software](#robot-software-aspect)
+  - [Why We Chose the LEGO EV3 Brick](#why-we-chose-the-lego-ev3-brick)
+  - [Components and Sensors](#components-and-sensors)
+    - [EV3 Medium Motor](#lego-ev3-medium-motor)
+    - [HiTechnic Compass Sensor](#hitechnic-compass-sensor)
+    - [HiTechnic Color Sensor](#hitechnic-color-sensor)
+    - [Pixy2 Vision Sensor](#pixy2-vision-sensor)
+    - [LEGO EV3 Ultrasonic Sensor](#lego-ev3-ultrasonic-sensor)
+    - [Why We Combine the Compass and Ultrasonic Sensors](#why-we-combine-the-compass-and-ultrasonic-sensors)
 
+- [Robot Design](#robot)
+  - [Mechanical Design](#robot-mechanical-design)
+    - [Rear Wheel Drive Mechanism](#rear-wheel-drive-mechanism)
+    - [Steering Mechanism](#steering-mechanism)
+    - [Mobility Management](#mobility-management)
+      - [Drivetrain Optimization](#1-drivetrain-optimization)
+      - [Steering Precision](#2-steering-precision)
+      - [Chassis Stability](#3-chassis-stability)
+
+- [Robot Software](#robot-software-aspect)
+  - [Development Platform](#development-platform)
+  - [Libraries](#libraries)
+
+- [Open Challenge Software](#open-challenge)
+  - [Software Architecture](#open-challenge)
+  - [Setup](#1-setup)
+  - [Servo System](#2-servo-system)
+    - [Rear Wheel Control](#rear-wheel-control)
+    - [Steering Control](#steering-control)
+    - [Complete Servo Module](#complete-servo-module)
+  - [Open Challenge Management](#3-open-challenge-management)
+    - [Initialization](#initialization)
+    - [Clockwise (CW) and Counter-Clockwise (CCW) Modes](#clockwise-cw-and-counter-clockwise-ccw-modes)
+    - [CCW Block](#ccw-block)
+      - [Positioning the Ultrasonic Sensor](#stage-1--positioning-the-ultrasonic-sensor)
+      - [Steering Decision](#stage-2--steering-decision)
+      - [Motor Command](#stage-3--motor-command)
+      - [Wall Following](#wall-following)
+      - [Line Detection](#line-detection)
+
+- [Obstacle Challenge Software](#obstacle-challenge-code)
+  - [Setup](#1-setup-1)
+  - [Servo System](#2-servo-1)
+  - [Leaving the Parking Zone](#3-getting-out-of-the-parking-zone)
+  - [Compass Initialization](#4-deciding-the-compass-numbers)
+  - [CW and CCW Navigation](#5-ccw-and-cw-blocks)
+  - [Obstacle Detection and Avoidance](#6-obstacle-management-strategy)
+  - [Parking Procedure](#7-getting-into-the-parking-zone)
+
+- [Future Improvements](#future-improvements)
+
+- [Acknowledgements](#acknowledgements)
 ---
 
 # The Team
