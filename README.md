@@ -892,7 +892,7 @@ The obstacle challenge code is divided into seven main sections. Separating the 
 ---
 
 ### 2. Servo
-  ![servoOC](images/servoOC)
+  ![servoOC](images/servoOCR.png)
 
 
 ---
