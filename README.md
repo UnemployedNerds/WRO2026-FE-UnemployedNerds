@@ -822,14 +822,15 @@ When the blue line is detected, the current loop terminates and the robot immedi
 This event marks the completion of one section of the track and initiates the following maneuver.
 
 By combining wall following, compass feedback, and color detection, the robot is able to navigate the Open Challenge with consistent speed and high reliability.
+***
+- all the code for CCW is the same for CW but with diffrant steering values and kp/kd
 
 ## Obstacle Challenge Code
 
 The obstacle challenge code is divided into seven main sections. Separating the program into independent modules makes the code easier to understand, debug, and improve. Each section is responsible for a specific task during the robot's autonomous run.
 
 ### 1. Setup
-
-*Write your explanation here.*
+  the setup is the same as the setup in the open challenge
 
 ---
 
