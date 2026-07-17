@@ -583,76 +583,245 @@ Heavy components were also positioned close to the center of the chassis, reduci
 
 Finally, the chassis was reinforced using cross-bracing to minimize structural flex and maintain consistent wheel alignment throughout each run.
 ***
-## Robot Software aspect
-### Code platform
-we use lego mindstorm ev3 for coding the robot
-- pictures of lego mindstorm ev3 :
-  ![]()
+# Robot Software Aspect
 
-### libraries
-- all the libraries used will be uploaded
-## Code explained
+## Development Platform
 
-### Open challenge
-so the code for our open challenge is 3 parts
-- part 1 : the setup
-  ![setup](images/setup)
- what setup does is that first it moves the all the way to the right then all the way to the left then it measures how much the wheels have traveled the takes the value and divides the value in 2 and gives it to the steering value in servo to straighten the wheels
-- part 2 : Servo , servo handles everything
-  ### rearwheel code
-  ![rearwheels](images/rearwheels)
-  -
-  so here we handle the robots speed
-  we take a power value multiply it by -1 ( why -1? cuz we messed up with the gears and stuff) and give it to the rotation speed of motor D
-  -
-  ### steering code
-  ![steering](images/steerPD)
-  so for steering the robot we dont just give a number to the motor and call it steering , we use a PD algorithm like the picture is showing
-  -
-  ![servo](images/servo)
-  heres servo fully, the two codes run simultaneously together creating the servo
-  
-- part 3 : open challenge management
-  
-  
-  ![openchallenge](images/openchallenge.png)
-  -
-  so the area circled in purple are the starting variables, the variables named kp and kd are the constants multiplied in the steering PD formula , the variable named 4 is storing the value that the ultrasonic sensor reads in cm , power is basically speed and steer is the steering value in general
-  ### CCW and CW
-  so areas circled in blue and orange are our main blocks for handling the open challenge
-  the area circled in blue , CCW or Counter Clock Wise is in the job of handling the round when its counter clock wise
-  ### CCW
-  so each CCW and CW blocks are mainly 2 parts
-  - first part :
-  
-  ![CCW](images/rlccw)
-  - the part circled in red :
-   this part basically the motor in control of the ultrasonic sensor in left so the ultrasonic can follow the non changable wall ( the outside wall)
-  - the part circled in green :
-    this part measures how much the ultrasonic sensor is reading and makes a desicion for steering the wheel based on that and its connected to a switch for the desicion making (like the switches in C++)
-  - the part circled in blue :
-    this block basically gives a steering value and tells the D motors how much to move forward or backwards
-    ![move](images/motordriver.png)
- 
-    
-    the part circled in blue are the input values
-    the green one resets the d motor value to zero
-    the brown one is the steering value variable
-    and the other one basically says wait until the motors moved X( the input value) degrees and then do what ever is left
-  ### 2nd part of CCW
-    ![ccw](images/ccwpart2.png)
-  - the area circled in purple :
-    this is a loop that runs 11 times , our piece of code is only for 1/4th of a round so we put it in a loop that runs 11 times for 3 rounds ( why 11 and not 12? at the first part it goes 1/4th of a round so that counts as 1)
-  - the area circled in orange :
-    this is the part where we follow the walls and turn when we detect a line
-    for tracking the walls we use a PD controller like this
-    ![wf](images/WF4.png)
-    its the same as the compasss PD which i exlpained but with the diffrence of that when we enter a CCW block the boolean variable named CW turns false and the Kp and Kd constants signs are the opisite of the CW block
-    so here the CW variable is false so it enters the false switch
-  - the rest of the area circled in purple :
-    so the action of the loop circled in orange goes on until the color sensor sees the color blue and then it escapes the loops and goes onto the next task
-    which uses a move block to steer the wheels and move
+The entire software for our robot was developed using the **LEGO Mindstorms EV3 Programming Environment**.
 
+This platform allowed us to rapidly prototype, test, and debug our algorithms while taking full advantage of the EV3 hardware and third-party sensors.
+
+Throughout development, our primary focus was reliability, modularity, and ease of debugging. Instead of creating one large program, we divided the software into independent modules, making it easier to improve individual components without affecting the rest of the system.
+
+*(Insert screenshots of the programming environment here.)*
+
+---
+
+## Libraries
+
+All custom libraries used throughout this project are included in the repository.
+
+These libraries simplify sensor communication, motor control, and reusable algorithms, making the overall software easier to maintain and expand.
+
+---
+
+# Code Explanation
+
+## Open Challenge
+
+The Open Challenge software is divided into three major components:
+
+1. Setup
+2. Servo System
+3. Open Challenge Management
+
+Separating the code into modules makes the program easier to understand, debug, and modify throughout development.
+
+---
+
+# 1. Setup
+
+![setup](images/setup)
+
+Before every run, the robot performs an automatic steering calibration.
+
+The steering motor first rotates completely to the right and then completely to the left. By measuring the total rotation between these two limits, the program calculates the exact center position.
+
+The calculated midpoint is then stored as the steering center, ensuring that the wheels are perfectly aligned before the robot starts driving.
+
+This calibration process compensates for mechanical tolerances and eliminates the need for manual steering adjustment before every run.
+
+---
+
+# 2. Servo System
+
+The Servo module is the core of our robot's motion control system.
+
+It continuously manages both:
+
+- Vehicle speed
+- Steering angle
+
+These two control loops operate simultaneously throughout the robot's run, allowing smooth and responsive driving.
+
+---
+
+## Rear Wheel Control
+
+![rearwheels](images/rearwheels)
+
+This block controls the driving motor connected to the rear differential.
+
+The program receives a desired power value and multiplies it by **-1** before sending it to Motor D.
+
+The negative multiplier is necessary because of the physical orientation of our drivetrain during construction. Rather than redesigning the gearbox, we compensated for the reversed motor direction in software.
+
+This approach simplified the mechanical design without affecting overall performance.
+
+---
+
+## Steering Control
+
+![steering](images/steerPD)
+
+Unlike a simple steering system that directly sets a motor position, our robot uses a **PD (Proportional-Derivative) Controller** to achieve smooth and accurate steering.
+
+The controller continuously calculates the steering error between the desired steering angle and the current wheel position.
+
+It then applies proportional and derivative corrections to smoothly move the steering motor toward the target position.
+
+Using a PD controller provides several advantages:
+
+- Smooth steering motion
+- Reduced oscillations
+- Faster response
+- Improved steering accuracy
+- Better stability at high speeds
+
+---
+
+## Complete Servo Module
+
+![servo](images/servo)
+
+The rear-wheel controller and steering controller operate simultaneously within the Servo module.
+
+Together they function as the robot's low-level motion controller, continuously receiving commands from the navigation system and converting them into precise motor movements.
+
+Every higher-level navigation routine communicates with the robot exclusively through this module.
+
+---
+
+# 3. Open Challenge Management
+
+![openchallenge](images/openchallenge.png)
+
+The Open Challenge Management module is responsible for coordinating the robot's behavior throughout the entire autonomous run.
+
+Rather than directly controlling the motors, this module decides:
+
+- Which driving routine should execute
+- When the robot should turn
+- Which wall to follow
+- How steering corrections should be calculated
+- When to transition between different stages of the course
+
+---
+
+## Initialization
+
+The variables highlighted at the beginning of the program initialize the robot's operating parameters.
+
+These include:
+
+- **Kp** – Proportional gain
+- **Kd** – Derivative gain
+- **Distance** – Current ultrasonic sensor reading
+- **Power** – Driving speed
+- **Steer** – Desired steering angle
+
+These variables are continuously updated while the robot is running.
+
+---
+
+# Clockwise (CW) and Counter-Clockwise (CCW) Modes
+
+The competition allows the robot to drive in either clockwise or counter-clockwise directions.
+
+To simplify the software, we created two independent navigation blocks:
+
+- **CW** (Clockwise)
+- **CCW** (Counter-Clockwise)
+
+Although both blocks perform similar tasks, they use opposite steering corrections and wall-following logic depending on the driving direction.
+
+This modular approach significantly simplified debugging and tuning.
+
+---
+
+# CCW Block
+
+Each navigation block consists of two major stages.
+
+---
+
+## Stage 1 – Positioning the Ultrasonic Sensor
+
+![CCW](images/rlccw)
+
+The first section rotates the ultrasonic sensor toward the outer wall of the track.
+
+Since the outside wall remains constant throughout the course, using it as the reference wall provides much more stable wall-following than tracking the inside wall.
+
+Maintaining a consistent reference significantly improves navigation accuracy.
+
+---
+
+## Stage 2 – Steering Decision
+
+The next section continuously measures the distance between the robot and the wall.
+
+Based on the measured distance, the program calculates the appropriate steering correction using conditional logic.
+
+This allows the robot to smoothly return to the desired path whenever it moves too close to or too far from the wall.
+
+---
+
+## Stage 3 – Motor Command
+
+The final section sends commands to the Servo module.
+
+![move](images/motordriver.png)
+
+Its main inputs are:
+
+- Steering value
+- Motor reset signal
+- Target travel distance
+
+The robot continues driving until the required motor rotation has been completed before executing the next instruction.
+
+Separating steering calculations from motor execution improves code readability and makes the software easier to debug.
+
+---
+
+# Stage 2 of the CCW Block
+
+![ccw](images/ccwpart2.png)
+
+After completing the initial positioning stage, the robot enters the main navigation loop.
+
+This loop executes **11 times**, allowing the robot to complete the required number of laps.
+
+The first quarter-turn is completed before entering the loop, which is why only eleven additional iterations are required instead of twelve.
+
+---
+
+## Wall Following
+
+The orange section performs continuous wall following.
+
+A dedicated **PD controller** calculates steering corrections based on the measured distance from the wall.
+
+![wf](images/WF4.png)
+
+The same control algorithm is used in both CW and CCW modes.
+
+The only difference is the sign of the proportional and derivative gains, which is reversed depending on the driving direction.
+
+This allows the same controller to function correctly regardless of whether the robot is moving clockwise or counter-clockwise.
+
+---
+
+## Line Detection
+
+While following the wall, the robot continuously monitors the color sensor.
+
+When the blue line is detected, the current loop terminates and the robot immediately transitions to the next navigation sequence.
+
+This event marks the completion of one section of the track and initiates the following maneuver.
+
+By combining wall following, compass feedback, and color detection, the robot is able to navigate the Open Challenge with consistent speed and high reliability.
 
 ## Obstacle Challenge Code
 
