@@ -1,8 +1,10 @@
-
-
 # WRO2026-FE-UnemployedNerds
-Repository of UnemployedNerds for the 2026 Future Engineers WRO iran national competition 
-#  Table of Contents
+
+Repository of **Team UnemployedNerds** for the **2026 World Robot Olympiad (WRO) Future Engineers – Iran National Competition**.
+
+---
+
+# Table of Contents
 
 - [The Team](#the-team)
   - [Araz Abbasi](#araz-abbasi)
@@ -21,117 +23,100 @@ Repository of UnemployedNerds for the 2026 Future Engineers WRO iran national co
 - [Videos](#videos)
 
 - [Platform and Components Used](#platform-and-components-used)
-  - [Why We Chose EV3 Brick for the Brain of Our Robot](#why-we-chose-ev3-brick-for-the-brain-of-our-robot)
-  - [Components and Sensors](#components-and-sensors)
-    - [EV3 Medium Motor](#ev3-medium-motor)
-    - [HiTechnic Compass](#hi-technic-compasss)
-    - [HiTechnic Color Sensor](#hitechnic-color-sensor)
-    - [Pixy2 Vision Sensor](#pixy2-vision-sensor)
-    - [Ultra Sonic Sensor](#ultra-sonic-sensor)
-    - [Importance of Using Compass and Ultrasonic Combined](#importance-of-using-compass-and-ultrasonic-coombined)
-
 - [Robot](#robot)
-  - [Robot's Mechanical Aspect](#robots-mechanical-aspect)
-    - [Rear Wheels Mechanism](#rear-wheels-mechanism)
-    - [Steering Mechanism](#steering-mechanism)
+- [Robot Software](#robot-software-aspect)
 
-  - [Robot Software Aspect](#robot-software-aspect)
-    - [Code Platform](#code-platform)
-    - [Libraries](#libraries)
-    - [Code Explained](#code-explained)
-      - [Open Challenge](#open-challenge)
-        - [Setup](#setup)
-        - [Servo](#servo)
-          - [Rear Wheel Code](#rearwheel-code)
-          - [Steering Code](#steering-code)
-        - [Open Challenge Management](#open-challenge-management)
-          - [CCW and CW](#ccw-and-cw)
-          - [CCW](#ccw)
-- [Obstacle Challenge Code](#obstacle-challenge-code)
-  - [Setup](#1-setup)
-  - [Servo](#2-servo)
-  - [Getting Out of the Parking Zone](#3-getting-out-of-the-parking-zone)
-  - [Deciding the Compass Numbers](#4-deciding-the-compass-numbers)
-  - [CCW and CW Blocks](#5-ccw-and-cw-blocks)
-  - [Obstacle Management Strategy](#6-obstacle-management-strategy)
-  - [Getting Into the Parking Zone](#7-getting-into-the-parking-zone)
-## The Team
+---
 
+# The Team
 
 ## Araz Abbasi
 
- - Role : Coder
- - Age : 15
- - Description : Hello everyonee!! im araz im from iran , its my 5th year competing in WRO tournoments,
- im deeply passionate about math/physics and electronics , i also play chess for a hobby rated 1500 in FIDE classical
- - Instagram : araz.abbasi.3
- - Email : arazabbasi830@gmail.com 
+- **Role:** Programmer
+- **Age:** 15
 
+Hello! I'm **Araz Abbasi** from Iran. This is my fifth year participating in the World Robot Olympiad. I have a strong passion for mathematics, physics, electronics, and programming. Outside of robotics, I enjoy playing chess and currently hold a **1500 FIDE Classical** rating.
 
- ![MyPhoto]()
+- **Instagram:** araz.abbasi.3
+- **Email:** arazabbasi830@gmail.com
+
+![MyPhoto]()
+
+---
 
 ## Radin Mirsarvestani
 
- - Role : Builder/slave
- - Age : 15
- - Description : Hello I'm Radin I'm from Iran Its my 5th year competing in WRO tournoments, I like building and playing war thunder
- - Instagram : Not available
- - Email : radin.mirsarvestani1030@gmail.com
+- **Role:** Mechanical Designer & Builder
+- **Age:** 15
 
+Hello! I'm **Radin Mirsarvestani** from Iran. This is also my fifth year competing in the World Robot Olympiad. I enjoy designing and building robots, and in my free time I like playing War Thunder.
 
- ![MyPhoto]()
- 
- ## Benyamin Nikvarz
+- **Instagram:** Not Available
+- **Email:** radin.mirsarvestani1030@gmail.com
 
- - Role : Coach
- - Age : 20
- - Description : 2nd year electrical engineer been doing robotics since 2016 and ive been coaching this team for 2 years and former WRO competetor
- - Instagram : 
- - Email : benyamin.nikvarz@gmail.com
+![MyPhoto]()
 
+---
 
- ![MyPhoto]()
+## Benyamin Nikvarz
 
- ## Golo
+- **Role:** Coach
+- **Age:** 20
 
- - Role : Mascot
- - Age : ??
- - Meow
- - Instagram : golo_lovers
- - Email : arazabbasi830@gmail.com
+I'm currently studying Electrical Engineering and have been involved in robotics since 2016. This is my second year coaching Team UnemployedNerds. Before becoming a coach, I also competed in the World Robot Olympiad, which allows me to share valuable experience with the team.
 
+- **Instagram:**
+- **Email:** benyamin.nikvarz@gmail.com
+
+![MyPhoto]()
+
+---
+
+## Golo
+
+- **Role:** Team Mascot
+- **Age:** Unknown
+
+Golo is the official mascot of Team UnemployedNerds and provides emotional support during long building and programming sessions.
+
+- **Instagram:** golo_lovers
+- **Email:** arazabbasi830@gmail.com
 
 ![golophoto]()
 
-  ## Our Team Photo
- ![MyPhoto]()
- ## Fun Photo
- ![MyPhoto]()
+---
 
+## Our Team Photo
 
+![MyPhoto]()
 
+---
 
+## Fun Photo
 
- 
-## Quick WRO Future Engineers challenge overview
+![MyPhoto]()
 
-#### Open Challenge
-- Open Challenge: 
-The robot must complete laps on a track without obstacles, demonstrating precision in wall-following and line detection.
+---
 
-- Goals : 3 laps
+# Quick WRO Future Engineers Challenge Overview
 
-    ![OpenChallenge]()
+## Open Challenge
 
+The objective of the Open Challenge is to complete **three autonomous laps** around the track without obstacles. The robot must demonstrate accurate wall-following, reliable line detection, and smooth navigation while maintaining consistent speed.
 
+**Goal:** Successfully complete 3 laps.
 
-#### Obstacle Challenge
-- Obstacle Challenge
-Robot completes laps while avoiding green (left) and red (right) pillars, then parks in the designated zone.
-- Goals :  laps + parallel parking
+![OpenChallenge]()
 
-    ![ObstacleChalleng]()
-  
+---
+
+## Obstacle Challenge
+
+In the Obstacle Challenge, the robot must complete multiple autonomous laps while avoiding **green** and **red** pillars placed throughout the course. Green pillars must be passed on the **left**, while red pillars must be passed on the **right**. After completing the required laps, the robot must finish by parking inside the designated parking zone.
+
+**Goal:** Complete all laps and perform a successful autonomous parallel parking maneuver.
+
+![ObstacleChallenge]()
 ## Robot Photos
 - front
 ![frontpic]()
