@@ -887,6 +887,7 @@ The obstacle challenge code is divided into seven main sections. Separating the 
 
 ### 1. Setup
   the setup is the same as the setup in the open challenge
+  - [Setup](#1-setup)
 
 ---
 
