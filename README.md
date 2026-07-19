@@ -952,7 +952,7 @@ if CCW it performs a movement and then starts obstacle tracking
     ![wfstop](images/WFSTOP)
 
     and now when the color sensor detects a line it switches over to this code and does a turning movment
-    ![steer](images/steermovement)
+    ![steer](images/steermovment)
 ---
 
 ### 6. Obstacle Management Strategy
@@ -972,7 +972,6 @@ and thats how we handle the obstacles
 ---
 
 ### 7. Getting Into the Parking Zone
-
-*Write your explanation here.*
+  after the last 1/4 of a lap it does a going inside the parking mechanism
 
 
