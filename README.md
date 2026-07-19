@@ -920,8 +920,8 @@ if CCW it performs a movement and then starts obstacle tracking
 ---
 
 ### 5. CCW and CW Blocks
-
-*Write your explanation here.*
+  both are the same logically but the only diffrence is the constant multipliers and steering values
+  
 
 ---
 
