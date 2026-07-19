@@ -936,8 +936,10 @@ if CCW it performs a movement and then starts obstacle tracking
     and the green part is where we take both of the PD algorithm and merge them together and giving the final value to the steering value
 
     and after passing the obstacle in the 2nd green part we use a PD compass algorithm to straightnen the robot and repeat the cycle
-
+    ***
     and when the camera detects no obstacles withing the width range we have chosen it goes on wall following mode
+    ![wf](images/WFOC.png)
+    this is a PD wallfollower merged with a PD compass wallfollower
 
 ---
 
