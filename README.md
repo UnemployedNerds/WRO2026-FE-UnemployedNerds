@@ -915,7 +915,7 @@ if CCW it performs a movement and then starts obstacle tracking
 ### 4. Deciding the Compass Numbers
   before starting the challenge the robot needs to know where it is and what rout to check , in the parking part it figures out if its CW or CCW
   after that the robot reads the compass numbers and checks what range is it in and then continues the rout
-
+![compdes](images/compdes)
 
 ---
 
