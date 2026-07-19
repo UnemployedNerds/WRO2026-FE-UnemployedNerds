@@ -905,14 +905,17 @@ The obstacle challenge code is divided into seven main sections. Separating the 
 ---
 
 ### 3. Getting Out of the Parking Zone
-
-*Write your explanation here.*
-
+![parkingout](images/parking)
+well our ultrasonic spins to the left and checks if its less than or more than 15cm , if its less than 15
+cm it knows its in CW and if more than 15 its CCW
+if its CW it scans for any obstacle near it and it makes a desicion based on that
+if CCW it performs a movement and then starts obstacle tracking
 ---
 
 ### 4. Deciding the Compass Numbers
+  before starting the challenge the robot needs to know where it is and what rout to check , in the parking part it figures out if its CW or CCW
+  after that the robot reads the compass numbers and checks what range is it in and then continues the rout
 
-*Write your explanation here.*
 
 ---
 
