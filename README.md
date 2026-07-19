@@ -938,6 +938,7 @@ if CCW it performs a movement and then starts obstacle tracking
     so our over all strategy is to follow an imaginary point but we hit a problem that we want the imaginary point to move depending on the X value of the obstacle so we came up with a strategy
     so in the picture we want to follow the purple point what we do is track the X value of the obstacle , in the picture its 110 for example we first divide the 110 by 2 to get the center of the obstacle and then add 60 to it and the rquation looks like this : 60+(1/2), and we give it to a PD algorithm and merge it with a PD algorithhm for the compass sensor and give it to the steering value in the servo
   - Green obstacle :
+    
     ![greenobs1](images/greenobs.png)
     the general strategy is the same for the green obstacle but instead of taking the X value and adding into it we first take the X value and divide by 2 to get the center of the obstacle and subtracting that value from 250 and the equation for it looks like this : 250-(x/2), then we give it to a PD algorithm and again merge it with a PD compass algorithm and give the final value to the steering value in the servo
 
