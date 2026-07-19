@@ -927,6 +927,8 @@ if CCW it performs a movement and then starts obstacle tracking
     ![loopstopper](images/Stop)
     this part breaks anyloop when the color sensor detects a line
   - part2 :  obstacle managment
+    in obstacle managment our strategy is this : go outside of the parking, 1st track obstacles that the widths are bigger or equal than 15 if camera sees no obstacle sees obstacles bigger or equal to 15 it follows a wall , this basically cycles in a loop and stops and performs a spinning movments and repeats this 12 times to perform 3 laps around the map and then on the last 1/4 it performs a going into the parking movment
+
     so for following the green obstacles we use this PD formula where
     ![greenobsfollow](images/greenobsfollowfalse.png)
     the black circle is the PD formula for follwing the obstacle and i explained our strategy in the next part
