@@ -927,8 +927,15 @@ if CCW it performs a movement and then starts obstacle tracking
     ![loopstopper](images/Stop)
     this part breaks anyloop when the color sensor detects a line
   - part2 :  obstacle managment
-  - 
-  - 
+    so for following the green obstacles we use this PD formula where
+    ![greenobsfollow](images/greenobdfollowfalse)
+    the black circle is the PD formula for follwing the obstacle and i explained our strategy in the next part
+    
+    the blue circle is the PD algorithm for the compasss sensor
+
+    and the green part is where we take both of the PD algorithm and merge them together and giving the final value to the steering value
+
+    and when the camera detects no obstacles withing the width range we have chosen it goes on wall following mode
 
 ---
 
