@@ -921,7 +921,12 @@ if CCW it performs a movement and then starts obstacle tracking
 
 ### 5. CCW and CW Blocks
   both are the same logically but the only diffrence is the constant multipliers and steering values
-  
+  ![CCWCW](images/CWobs)
+  so each block is mainly 3 parts
+  - part1 : loop stopper
+    this part breaks anyloop when the color sensor detects a line
+  - part2 :  obstacle managment
+  - 
 
 ---
 
