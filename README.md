@@ -942,7 +942,10 @@ if CCW it performs a movement and then starts obstacle tracking
     and when the camera detects no obstacles withing the width range we have chosen it goes on wall following mode
     ![wf](images/WFOC.png)
     this is a PD wallfollower merged with a PD compass wallfollower
+    the same logic applies for the red obstacle
 
+    okay now when the camera sees no obstacle :
+    
 ---
 
 ### 6. Obstacle Management Strategy
