@@ -943,7 +943,6 @@ if CCW it performs a movement and then starts obstacle tracking
     ![greenobs1](images/greenobs.png)
 
     the general strategy is the same for the green obstacle but instead of taking the X value and adding into it we first take the X value and divide by 2 to get the center of the obstacle and subtracting that value from 250 and the equation for it looks like this : 250-(x/2), then we give it to a PD algorithm and again merge it with a PD compass algorithm and give the final value to the steering value in the servo
-
 and thats how we handle the obstacles
 ---
 
