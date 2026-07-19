@@ -946,6 +946,7 @@ if CCW it performs a movement and then starts obstacle tracking
 
     okay now when the camera sees no obstacle :
     ![wf](images/RLWFOC)
+    again its a simple PD for ultrasonic and compass merged together for the wallfollowing
     
 ---
 
