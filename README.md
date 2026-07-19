@@ -928,7 +928,7 @@ if CCW it performs a movement and then starts obstacle tracking
     this part breaks anyloop when the color sensor detects a line
   - part2 :  obstacle managment
     so for following the green obstacles we use this PD formula where
-    ![greenobsfollow](images/greenobdfollowfalse)
+    ![greenobsfollow](images/greenobdfollowfalse.png)
     the black circle is the PD formula for follwing the obstacle and i explained our strategy in the next part
     
     the blue circle is the PD algorithm for the compasss sensor
