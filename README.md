@@ -945,6 +945,7 @@ if CCW it performs a movement and then starts obstacle tracking
     the same logic applies for the red obstacle
 
     okay now when the camera sees no obstacle :
+    ![wf](images/RLWFOC)
     
 ---
 
