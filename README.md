@@ -950,7 +950,9 @@ if CCW it performs a movement and then starts obstacle tracking
     and the loop stops with this code
     
     ![wfstop](images/WFSTOP)
-    
+
+    and now when the color sensor detects a line it switches over to this code and does a turning movment
+    ![steer](images/steermovement)
 ---
 
 ### 6. Obstacle Management Strategy
