@@ -924,8 +924,10 @@ if CCW it performs a movement and then starts obstacle tracking
   ![CCWCW](images/CWobs)
   so each block is mainly 3 parts
   - part1 : loop stopper
+    ![loopstopper](images/Stop)
     this part breaks anyloop when the color sensor detects a line
   - part2 :  obstacle managment
+  - 
   - 
 
 ---
